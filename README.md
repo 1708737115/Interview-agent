@@ -12,7 +12,8 @@
 ## ✨ 核心特性
 
 ### 🤖 智能面试引擎
-- **动态题库系统**: 根据简历技能栈智能筛选相关技术题目(Go、Java、Python、MySQL、Redis等)
+- **海量题库**: **641+** 道大厂后端面试真题，涵盖 Go、MySQL、Redis、Docker、微服务、分布式系统等
+- **动态题库系统**: 根据简历技能栈智能筛选相关技术题目，支持自定义启用/禁用分类
 - **多维度评估**: 基于回答长度、技术术语、逻辑解释、代码示例等自动评分
 - **实事求是评价**: 面试结束后提供客观、直接、有针对性的反馈，指出具体问题和改进方向
 - **追问机制**: 50%概率触发深度追问，考察技术理解深度
@@ -53,7 +54,13 @@ cp .env.example .env
 # 3. 启动服务
 docker-compose up -d
 
-# 4. 访问系统
+# 4. 选择题库配置（可选）
+# 我们提供多种题库配置，根据需求选择：
+cp question_bank_light.json question_bank.json  # 轻量版（217题，推荐新手）
+# 或
+cp question_bank_config.json question_bank.json  # 完整版（641题，推荐生产）
+
+# 5. 访问系统
 # 前端: http://localhost:3000
 # 后端API文档: http://localhost:8000/docs
 ```

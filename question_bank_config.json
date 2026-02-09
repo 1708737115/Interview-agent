@@ -1,0 +1,3041 @@
+{
+  "version": "1.0",
+  "description": "AI面试系统题库配置",
+  "groups": {
+    "basics": {
+      "name": "计算机基础",
+      "description": "操作系统、计算机网络、数据结构与算法等基础知识",
+      "enabled": true,
+      "categories": {
+        "basics_os": {
+          "name": "操作系统",
+          "enabled": false,
+          "count": 2,
+          "questions": [
+            {
+              "id": "basics-os-0",
+              "text": "LVS相关了解.⽹络和操作系统进程和线程的区别？",
+              "category": "basics_os",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics-os-1",
+              "text": "语法:merge_slashes [on/off] 默认值: merge_slashes on环境: http，server merge_slashes_off;Nginx 服务器上的 Master 和 Worker 进程分别是什么?",
+              "category": "basics_os",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "basics_network": {
+          "name": "计算机网络",
+          "enabled": false,
+          "count": 7,
+          "questions": [
+            {
+              "id": "basics-network-0",
+              "text": "请详细介绍⼀下 TCP 的三次握⼿机制，为什么要三次握⼿？",
+              "category": "basics_network",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics-network-1",
+              "text": "讲⼀讲 SYN 超时，洪泛攻击，以及解决策略详细介绍⼀下 TCP 的四次挥⼿机制，为什么要有 TIME_WAIT 状态，为什么需要四次握⼿？",
+              "category": "basics_network",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics-network-2",
+              "text": "请解释 Nginx 如何处理 HTTP 请求。 为什么要做动、静分离？",
+              "category": "basics_network",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics-network-3",
+              "text": "负载均衡器的管理员能主要为下⾯四种主要类型的请求设置转发规则：HTTP (七层)HTTPS (七层)TCP (四层)UDP (四层)负载均衡器如何选择要转发的后端服务器？",
+              "category": "basics_network",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics-network-4",
+              "text": "轮询：CPU对特定设备轮流询问。中断：通过特定事件提醒 CPU。轮询：效率低等待时间⻓，CPU利率不⾼。中断：容易遗漏问题，CPU利率不⾼。请详细介绍⼀下 TCP 的三次握⼿机制，为什么要三次握⼿？",
+              "category": "basics_network",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics-network-5",
+              "text": "于确认字段的值，则证明是刚刚请求连接的客户端，这时候才为该 TCP 分配资源这样⼀来就不会为恶意攻击的 SYN 报段分配资源空间，避免了攻击。详细介绍⼀下 TCP 的四次挥⼿机制，为什么要有 TIME_WAIT 状态，为什么需要四次握⼿？",
+              "category": "basics_network",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics-network-6",
+              "text": "请解释 Nginx 如何处理 HTTP 请求。 Nginx 使反应器模式。主事件循环等待操作系统发出准备事件的信号，这样 数据就可以从套接字读取，在该实例中读取到缓冲区并进⾏处理。单个线程可 以提供数万个并发连接。为什么要做动、静分离？",
+              "category": "basics_network",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "basics_linux": {
+          "name": "Linux",
+          "enabled": true,
+          "count": 41,
+          "questions": [
+            {
+              "id": "basics_linux-10",
+              "text": "信号量套接字(socket)Linux 有哪些系统志件？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-11",
+              "text": "在⾮ Linux 操作系统平台上如何运⾏ Docker ?",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-12",
+              "text": "Linux 什么是 LinuxUnix 和 Linux 有什么区别？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-13",
+              "text": "Linux 的基本组件是什么？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-14",
+              "text": "Linux 的体系结构BASH 和 DOS 之间的基本区别是什么？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-15",
+              "text": "Linux 系统缺省的运⾏级别？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-16",
+              "text": "Linux 使的进程间通信式？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-17",
+              "text": "Linux 系统安装多个桌⾯环境有帮助吗？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-18",
+              "text": "Linux 下命令有哪⼏种可使的通配符？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-19",
+              "text": "Linux 中进程有哪⼏种状态？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-20",
+              "text": "如果⼀个linux新⼿想要知道当前系统持的所有命令的列表，他需要怎么做？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-21",
+              "text": "bash shell 中的hash 命令有什么作？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-22",
+              "text": "怎样查看⼀个linux命令的概要与法？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-23",
+              "text": "Epoll原理.负载均衡原理是什么?",
+              "category": "basics_linux",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-24",
+              "text": "Elasticsearch 在部署时，对 Linux 的设置有哪些优化法？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-25",
+              "text": "费资源。这只是译者⾃⼰之孔⻅，想喷就喷！另： Windows Server 2016 版本之后的都可持这种原 Docker 技术，如 Windows Server 2018 版。在⾮ Linux 操作系统平台上如何运⾏ Docker ?",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-26",
+              "text": "程和多 CPU的操作系统。它能运⾏主要的 Unix ⼯具软件、应程序和⽹络协议。它持32 位和64 位硬件。Linux 继承了 Unix 以⽹络为核⼼的设计思想，是⼀个性能稳定的多户⽹络操作系统。Unix 和 Linux 有什么区别？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "design"
+            },
+            {
+              "id": "basics_linux-27",
+              "text": "操作系统，Linux 操作系统更受⼴⼤计算机爱好者的喜爱，主要原因是 Linux 操作系统具有 Unix 操作系统的全部功能，并且能够在普通 PC计算机上实现全部的 Unix 特性，开源免费的特性，更容易普及使！什么是 Linux 内核？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-28",
+              "text": "Linux 系统的核⼼是内核。内核控制着计算机系统上的所有硬件和软件，在必要时分配硬件，并根据需要执⾏软件。系统内存管理应程序管理硬件设备管理件系统管理Linux 的基本组件是什么？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-29",
+              "text": "系统调接⼝(System Call Interface)、内核(Kernel)、平台架构相关的代码(Architecture - Dependent Kernel Code)。为什么 Linux 体系结构要分为户空间和内核空间的原因？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-30",
+              "text": "nux 从 CPU 的⻆度出发，为了保护内核的安全，把系统分成了两部分。户空间和内核空间是程序执⾏的两种不同的状态，我们可以通过两种式完成户空间到内核空间的转移：1）系统调；2）硬件中断。BASH 和 DOS 之间的基本区别是什么？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-31",
+              "text": "，/ character 是⽬录分隔符，\\作为转义字符。在 DOS下，/作命令参数分隔符，\\是⽬录分隔符DOS遵循命名件中的约定，即8 个字符的件名后跟⼀个点，扩展名为3 个字符。BASH没有遵循这样的惯例。Linux 开机启动过程？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-32",
+              "text": "了解即可主机加电⾃检，加载 BIOS 硬件信息读取 MBR 的引导件(GRUB、LILO)引导 Linux 内核运⾏第⼀个进程 init (进程号永远为1 )进⼊相应的运⾏级别运⾏终端，输⼊户名和密码Linux 系统缺省的运⾏级别？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-33",
+              "text": "关机单机户模式字符界⾯的多户模式(不持⽹络)字符界⾯的多户模式未分配使图形界⾯的多户模式重启Linux 使的进程间通信式？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-34",
+              "text": "管道(pipe)、流管道(s_pipe)、有名管道(FIFO)信号(signal)消息队列共享内存 信号量套接字(socket)Linux 有哪些系统志件？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-35",
+              "text": "重要的是/var/log/messages 志件。该志件是许多进程志件的汇总，从该件可以看出任何⼊侵企图或成功的⼊侵。另外，如果胖友的系统⾥有 ELK 志集中收集，它也会被收集进去。Linux 系统安装多个桌⾯环境有帮助吗？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-36",
+              "text": "容纳正在执⾏的所有程序时，就会发这种情况。什么是 Root 帐户 root 帐户就像⼀个系统管理员帐户，允许你完全控制系统。你可以在此处创建和维护户帐户，为每个帐户分配不同的权限。每次安装 Linux 时都是默认帐户。什么是 LILO？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-37",
+              "text": "LILO是 Linux 的引导加载程序。它主要于将 Linux 操作系统加载到主内存中，以便它可以开始运⾏。什么是 BASH？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-38",
+              "text": "ourne Shell（由/ bin / sh 表示）的替代品。它结合了原始版本的 Bourne Shell 的所有功能，以及其他功能，使其更容易使。从那以后，它已被改编为运⾏ Linux 的⼤多数系统的默认 shell。什么是 CLI？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-39",
+              "text": "rm rm -r rmdirLinux 下命令有哪⼏种可使的通配符？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-40",
+              "text": "是⼀种强⼤的本搜索⼯具，它能使正则表达式搜索本，并把匹 配的⾏打印出来。grep [stringSTRING] filename grep [^string] filenameLinux 中进程有哪⼏种状态？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-41",
+              "text": "、退出状态D 不可中断 Uninterruptible（usually IO）R 正在运⾏，或在队列中的进程S 处于休眠状态T 停或被追踪Z 僵⼫进程W 进⼊内存交换（从内核 2.6 开始效）X 死掉的进程怎么使⼀个命令在后台运⾏?",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-42",
+              "text": "”\\e[24~\":\"date\"'注意：相同的按键在不同的终端或终端模拟器下可能会产不同的字符序列。【附】也可以使showkey -a命令查看按键对应的字符序列。 如果⼀个linux新⼿想要知道当前系统持的所有命令的列表，他需要怎么做？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-43",
+              "text": "使linux命令 ’disown -r ’可以将所有正在运⾏的进程移除。 bash shell 中的hash 命令有什么作？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-44",
+              "text": "and2 /bin/ls2 /bin/su哪⼀个bash内置命令能够进⾏数学运算。 bash shell 的内置命令let 可以进⾏整型数的数学运算。#! /bin/bash……let c=a+b…… 怎样⼀⻚⼀⻚地查看⼀个⼤件的内容呢？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-45",
+              "text": "数据字典是属于’SYS’户的，户‘SYS’ 和 ’SYSEM’是由系统默认⾃动创建的 怎样查看⼀个linux命令的概要与法？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-46",
+              "text": "ait⾮常⾼效。⽽且，通常情况下即使我们要监控百万计的句柄，⼤多⼀次也只返回很少量的准备就绪句柄⽽已，所以，epoll_wait仅需要从内核态copy少量的句柄到户态⽽已，因此就会⾮常的⾼效！然⽽,这个准备就绪list链表是怎么维护的呢？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-47",
+              "text": "。2. ipvsadm：另外⼀段是⼯作在户空间，叫ipvsadm，负责为ipvs内核框架编写规则，定义谁是集群服务，⽽谁是后端真实的服务器(Real Server)详细的LVS的介绍可以参考LVS详解. ⽹络和操作系统 进程和线程的区别？",
+              "category": "basics_linux",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-48",
+              "text": "i5-8250U是4 核8 线程，这⾥的线程就是内核级线程户级线程：它仅存在于户级中，这种线程是不依赖于操作系统核⼼的。应进程利线程库来完成其创建和管理，速度较快，操作系统内核法感知户级线程的存在。什么是临界区，如何解决冲突？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-49",
+              "text": "这个貌似没什么好说的，去官档下载对应操作系统安装包即可。 部分功能是收费的，如机器学习、⾼级别 kerberos 认证安全等选型要知悉。 Elasticsearch 在部署时，对 Linux 的设置有哪些优化法？",
+              "category": "basics_linux",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "basics_linux-50",
+              "text": "什么是 Linux Linux 是⼀套免费使和⾃由传播的类 Unix 操作系统？",
+              "category": "basics_linux",
+              "difficulty": 3,
+              "type": "technical"
+            }
+          ]
+        }
+      }
+    },
+    "languages": {
+      "name": "编程语言",
+      "description": "Go、Java、Python等编程语言特性",
+      "enabled": true,
+      "categories": {
+        "language_go": {
+          "name": "Go语言",
+          "enabled": true,
+          "count": 85,
+          "questions": [
+            {
+              "id": "go-1",
+              "text": "Go语言的goroutine和线程有什么区别？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "go-2",
+              "text": "Go语言的channel底层实现原理是什么？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "go-3",
+              "text": "Go语言的垃圾回收机制是怎样的？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "go-4",
+              "text": "Go语言的interface底层是如何实现的？",
+              "category": "language_go",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "go-5",
+              "text": "Go语言的context包有什么作用？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "go-6",
+              "text": "Go语言的defer语句执行顺序是怎样的？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "go-7",
+              "text": "Go语言的sync.Map和原生map有什么区别？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "go-8",
+              "text": "Go语言的slice底层结构是什么样的？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-10",
+              "text": "说下Go中的锁有哪些?三种锁，读写锁，互斥锁，还有map的安全的锁?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-11",
+              "text": "Go 语⾔是如何实现切⽚扩容的？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-12",
+              "text": "Golang 使什么数据类型？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-13",
+              "text": "Golang开发新⼿常犯的50个错误Go 程序中的包是什么？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-14",
+              "text": "go struct能不能较Go 持什么形式的类型转换？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-15",
+              "text": "Goroutine和线程的区别?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-16",
+              "text": "Golang中除了加Mutex锁以外还有哪些式安全读写共享变量？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-17",
+              "text": "go语⾔的并发机制以及它所使的CSP并发模型．Golang 中常的并发模型？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-18",
+              "text": "JSON 标准库对 nil slice 和 空 slice 的处理是⼀致的吗？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-19",
+              "text": "协程，线程，进程的区别。互斥锁，读写锁，死锁问题是怎么解决。Golang的内存模型，为什么⼩对象多了会造成gc压⼒。说下Go中的锁有哪些?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-20",
+              "text": "什么是channel，为什么它可以做到线程安全？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-21",
+              "text": "怎么限制Goroutine的数量.Channel是同步的还是异步的.Data Race问题怎么解决？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-22",
+              "text": "Go 两个接⼝之间可以存在什么关系？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-23",
+              "text": "作是什么Go 语⾔当中 Channel（通道）有什么特点，需要注意什么？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-24",
+              "text": "Go 语⾔当中 Channel 缓冲有什么特点？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-25",
+              "text": "Go 语⾔中 cap 函数可以作于那些内容？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-26",
+              "text": "Go 语⾔当中 new 和 make 有什么区别吗？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-27",
+              "text": "Go 语⾔中 make 的作是什么？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-28",
+              "text": "Go 语⾔当中数组和切⽚的区别是什么？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-29",
+              "text": "Go 语⾔当中值传递和地址传递（引传递）如何运？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-30",
+              "text": "举例说明Go 语⾔当中数组和切⽚在传递的时候的区别是什么？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-31",
+              "text": "看下⾯代码的 defer 的执⾏顺序是什么？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-32",
+              "text": "defer 的作和特点是什么？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-33",
+              "text": "Golang Slice 的底层实现Golang Slice 的扩容机制，有什么注意点？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-34",
+              "text": "扩容前后的 Slice 是否相同？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-35",
+              "text": "Golang 的参数传递、引类型Golang Map 底层实现Golang Map 如何扩容Golang Map 查找介绍⼀下 ChannelGo 语⾔的 Channel 特性？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-36",
+              "text": "Golang GC 时会发什么?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-37",
+              "text": "Golang 中 Goroutine 如何调度?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-38",
+              "text": "作和锁的区别什么是 CASsync.Pool 有什么Go ⾼级Goroutine 定义GMP 指的是什么给⼤家丢脸了，了三年golang，我还是没答对这道内存泄漏题你⼀定会遇到的内存回收策略导致的疑似内存泄漏的问题GMP⾥为什么要有P?",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-39",
+              "text": "ealing 机制GMP 中 hand off 机制协作式的抢占式调度基于信号的抢占式调度GMP 调度过程中存在哪些阻塞sysmon 有什么作三⾊标记原理插⼊写屏障删除写屏障写屏障混合写屏障GC 触发时机Go 语⾔中 GC 的流程是什么？",
+              "category": "language_go",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-40",
+              "text": "GC 如何调优Go语⾔的栈空间管理是怎么样的?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-41",
+              "text": "Goroutine和Channel的作分别是什么?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-42",
+              "text": "怎么查看Goroutine的数量?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-43",
+              "text": "elasticsearch 的 document 设计 Go ⼊⻔ 与其他语⾔相，使 Go 有什么好处？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-44",
+              "text": "松。Golang 针对并发进⾏了优化，并且在规模上运⾏良好。由于单⼀的标准代码格式，Golang 通常被认为其他语⾔更具可读性。⾃动垃圾收集明显 Java 或 Python 更有效，因为它与程序同时执⾏。Golang 使什么数据类型？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-45",
+              "text": "出包以重导出的函数或类型： Golang 的标准包是 fmt，其中包含格式化和打印功能，如 Println().package <packagename> import <packagename> 连nil切⽚和空切⽚⼀不⼀样都不清楚？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-46",
+              "text": "将整数转换为浮点数。 Go 持显式类型转换以满⾜其严格的类型要求。 Log包线程安全吗？",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-47",
+              "text": "存储和获取值，不受其他线程⼲扰。goroutine中没有可供程序员访问的标识，原因是⼀种纯函数的理念，不希望滥线程局部存储导致⼀个不健康的超距作，即函数的⾏为不仅取决于它的参数，还取决于运⾏它的线程标识。 什么是 Goroutine？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-48",
+              "text": "Golang中Goroutine 可以通过 Channel 进⾏安全读写共享变量。缓冲 Chan 的发送和接收是否同步?",
+              "category": "language_go",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-49",
+              "text": "，传数据channel <- data和取数据<-channel必然会成对出现，因为这边传，那边取，两个goroutine之间才会实现通信。⽽且不管传还是取，必阻塞，直到另外的goroutine传或者取为。Golang 中常的并发模型？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-50",
+              "text": "数据。 其中的原因是⼀致的：接收取消信号的函数和发送信号的函数通常不是⼀个。 典型的场景是：操作为⼦操作操作启动 goroutine，⼦操作也就不能取消操作。JSON 标准库对 nil slice 和 空 slice 的处理是⼀致的吗？",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "language_go-51",
+              "text": "资源可，死锁状态.消除为.所谓代价是指优先级、运⾏代价、进程的重要性和价值等。Golang的内存模型，为什么⼩对象多了会造成gc压⼒。 通常⼩对象过多会导致GC三⾊法消耗过多的GPU。优化思路是，减少对象分配. 说下Go中的锁有哪些?",
+              "category": "language_go",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "language_java": {
+          "name": "Java",
+          "enabled": false,
+          "count": 0,
+          "questions": []
+        },
+        "language_python": {
+          "name": "Python",
+          "enabled": false,
+          "count": 0,
+          "questions": []
+        }
+      }
+    },
+    "databases": {
+      "name": "数据库",
+      "description": "MySQL、Redis、MongoDB等数据库技术",
+      "enabled": true,
+      "categories": {
+        "database_mysql": {
+          "name": "MySQL",
+          "enabled": true,
+          "count": 55,
+          "questions": [
+            {
+              "id": "mysql-1",
+              "text": "MySQL的索引底层使用什么数据结构？为什么选择这种结构？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mysql-2",
+              "text": "MySQL的事务隔离级别有哪些？分别解决了什么问题？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "mysql-3",
+              "text": "MySQL的InnoDB存储引擎有什么特点？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mysql-4",
+              "text": "如何优化MySQL的慢查询？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mysql-5",
+              "text": "MySQL的主从复制原理是什么？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mysql-6",
+              "text": "MySQL的锁有哪些类型？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "mysql-7",
+              "text": "MySQL的索引设计原则有哪些？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-10",
+              "text": "怎么测试 Redis 的连通性怎么理解 Redis 事务？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-11",
+              "text": "Redis 事务相关的命令有哪⼏个？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-12",
+              "text": "MySQL ⾥有2000w 数据，Redis 中只存20w 的数据，如何保证 redis 中的数据都是热点数据？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-13",
+              "text": "MySQL隔离级别与锁的关系实践中如何优化 MySQL？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-14",
+              "text": "优化⼦查询的法前缀索引MySQL 5.6 和 MySQL 5.7 对索引做了哪些优化？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-15",
+              "text": "MySQL 有关权限的表有哪⼏个呢？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-16",
+              "text": "MySQL 中都有哪些触发器？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-17",
+              "text": "数据库索引的原理，为什么要 B+树，为什么不⼆叉树？",
+              "category": "database_mysql",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-18",
+              "text": "据库三⼤范式是什么MySQL 有关权限的表都有哪⼏个？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-19",
+              "text": "MySQL 的 Binlog 有有⼏种录⼊格式？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-20",
+              "text": "MySQL 存储引擎 MyISAM 与 InnoDB 区别MyISAM 索引与 InnoDB 索引的区别？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-21",
+              "text": "MySQL 中 InnoDB 持的四种事务隔离级别名称，以及逐级之间的区别？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-22",
+              "text": "如何在 Unix 和 MySQL 时间戳之间进⾏转换？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-23",
+              "text": "MyISAM 表类型将在哪⾥存储，并且还提供其存储格式？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-24",
+              "text": "MySQL ⾥记录货币什么字段类型好创建索引时需要注意什么？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-25",
+              "text": "何时使聚簇索引与⾮聚簇索引MySQL 连接器MySQL 查询缓存MySQL 分析器MySQL 优化器MySQL 执⾏器 什么是临时表，何时删除临时表？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-26",
+              "text": "MyISAM 存储引擎的特点InnoDB 存储引擎的特点Mysql⾼可案有哪些?",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-27",
+              "text": "Memcached 和 MySQL 的 query cache 相，有什么优缺点？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-28",
+              "text": "原⼦性的。多个操作也持事务，即原⼦性，通过 MULTI 和 EXEC 指令包起来。丰富的特性– Redis 还持 publish/subscribe,通知, key 过期等等特性。Redis 与其他 key-value 存储有什么不同？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-29",
+              "text": "ted set，hash。 持事务，操作都是原⼦性，所谓的原⼦性就是对数据的更改要么全部执⾏， 要么全部不执⾏。 丰富的特性：可于缓存，消息，按 key 设置过期时间，过期后将会⾃动删 除。 为什么 edis 需要把所有数据放到内存中？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-30",
+              "text": "相，功能较为简单，不持字符串操作，不持排序、事务、管道、分区等 Redis 特性。Redisson 的宗旨是促进使者对 Redis 的关注分离，从⽽让使者能够将精⼒更集中地放在处理业务逻辑上。Redis 如何设置密码及验证密码？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-31",
+              "text": "Redis 集群⽬前法做数据库选择，默认在0 数据库。 怎么测试 Redis 的连通性 使 ping 命令。怎么理解 Redis 事务？",
+              "category": "database_mysql",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-32",
+              "text": "事务是⼀个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执⾏。事务在执⾏的过程中，不会被其他客户端发送来的命令请求所打断。2）事务是⼀个原⼦操作：事务中的命令要么全部被执⾏，要么全部都不执⾏。Redis 事务相关的命令有哪⼏个？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-33",
+              "text": "对较复杂！具体哪种案，⼤家可以根据⾃⼰的应场景来权衡。 MySQL MySQL 隔离级别与锁的关系 回答这个问题，可以先阐述四种隔离级别，再阐述它们的实现原理。隔离级别就是依赖锁 和 MVCC 实现的。 实践中如何优化 MySQL？",
+              "category": "database_mysql",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-34",
+              "text": "调整 prefixLen 的值（从 1 ⾃增）查看不同前缀⻓度的⼀个平均匹配度，接近 1 时就可 以了（表示⼀个密码的前 prefixLen 个字符⼏乎能确定唯⼀⼀条记录）。 MySQL 5.6 和 MySQL 5.7 对索引做了哪些优化？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-35",
+              "text": "模糊查询的条件来校验索引⾏数据是否符合条件，如果符合条件，则直接根据 索引来定位对应的数据，如果不符合直接 reject 掉。因此，有了索引下推优化，可以 在有 like 条件的情况下，减少回表的次数。 MySQL 有关权限的表有哪⼏个呢？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-36",
+              "text": "级的操作权限。columns_priv 权限表：记录数据列级的操作权限。host 权限表：配合 db 权限表对给定主机上数据库级操作权限作更细致的控制。这个 权限表不受 GRANT 和 REVOKE语句的影响。MySQL 中都有哪些触发器？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-37",
+              "text": "，但是法进⾏范围查询。hash 索引没办法利索引完成排序。hash 索引不持多列联合索引的最左匹配规则。如果有⼤量重复健值得情况下，hash 索引的效率会很低，因为哈希碰撞问题。数据库索引的原理，为什么要 B+树，为什么不⼆叉树？",
+              "category": "database_mysql",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-38",
+              "text": "可以从⼏个维度去看这个问题，查询是否够快，效率是否稳定，存储数据多少，以及查找 磁盘次数，为什么不是⼆叉树，为什么不是平衡⼆叉树，为什么不是 B树，⽽偏偏是 B+树呢？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-39",
+              "text": "磁盘中读取⼀个节点，也就是我们说的⼀个磁盘块，但是平 衡⼆叉树可是每个节点只存储⼀个键值和数据的，如果是 B树，可以存储更多的节点数 据，树的⾼度也会降低，因此读取磁盘的次数就降下来啦，查询效率就快啦。 那为什么不是 B 树⽽是 B+树呢？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-40",
+              "text": "部分。第三范式：在第⼆范式的基础上，⾮主键列只依赖于主键，不依赖于其他⾮主键。在设计数据库结构的时候，要尽量遵守三范式，如果不遵守，必须有⾜够的理由。如性能。事实上我们经常会为了性能⽽妥协数据库的设计。MySQL 有关权限的表都有哪⼏个？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-41",
+              "text": "columns_priv 权限表：记录数据列级的操作权限。host 权限表：配合 db 权限表对给定主机上数据库级操作权限作更细致的控制。这个权限表不受 GRANT和 REVOKE语句的影响。MySQL 的 Binlog 有有⼏种录⼊格式？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-42",
+              "text": "址，可以直接找到数据。表结构件上:MyISAM的表结构件包括:frm(表结构定义),.MYI(索引),.MYD(数据);⽽ InnoDB的表数据件为:ibd 和 frm(表结构定义)。MyISAM 索引与 InnoDB 索引的区别？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-43",
+              "text": "主键索引的叶⼦节点存储着⾏数据，因此主键索引⾮常⾼效。MyISAM索引的叶⼦节点存储的是⾏数据地址，需要再寻址⼀次才能得到数据。InnoDB⾮主键索引的叶⼦节点存储的是主键和其他带索引的列数据，因此查询时做到覆盖索引会⾮常⾼效。什么是索引？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-44",
+              "text": "统中⼀个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使 B树及其变种 B+树。更通俗的说，索引就相当于⽬录。为了便查找书中的内容，通过对内容建索引形成⽬录。索引是⼀个件，它是要占据物理空间的。索引有哪些优缺点？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-45",
+              "text": "1, column2, column3);创建组合索引。全索引：是⽬前搜索引擎使的⼀种关键技术。可以通过 ALTER TABLE table_name ADD FULLTEXT (column);创建全索引。MySQL 中有哪⼏种锁？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-46",
+              "text": "锁慢；会出现死锁；锁定粒度最⼩，发锁冲突的概率最低，并发度也最⾼。⻚⾯锁：开销和加锁时间界于表锁和⾏锁之间；会出现死锁；锁定粒度界于表锁和⾏锁之间，并发度⼀般。MySQL 中 InnoDB 持的四种事务隔离级别名称，以及逐级之间的区别？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-47",
+              "text": "表格的每⼀⾏都由主键唯⼀标识,⼀个表只有⼀个主键。主键也是候选键。按照惯例，候选键可以被指定为主键，并且可以于任何外键引。如何在 Unix 和 MySQL 时间戳之间进⾏转换？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-48",
+              "text": "UNIX_TIMESTAMP是从 Mysql时间戳转换为 Unix 时间戳的命令 FROM_UNIXTIME 是从 Unix 时间戳转换为 Mysql时间戳的命令。MyISAM 表类型将在哪⾥存储，并且还提供其存储格式？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-49",
+              "text": "索引则都可以到，a,b,d 的顺序可以任意调整。=和 in 可以乱序，如 a = 1 and b = 2 and c = 3 建(a,b,c)索引可以任意顺序，mysql 的查询优化器会帮你优化成索引可以识别的形式。 什么是聚簇索引？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-50",
+              "text": "MySQL在执⾏ SQL语句的过程中通常会临时创建⼀些存储中间结果集的表，临时表只对当前连接可⻅，在连接关闭时，临时表会被删除并释放所有表空间。临时表分为两种:⼀种是内存临时表，⼀种是磁盘临时表，什么区别呢?",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-51",
+              "text": "据的⼀致性。InnoDB和 MylSAM持的索引类型相同，但具体实现因为件结构的不同有很⼤差异。增删改查性能⾯，果执⾏⼤量的增删改操作，推荐使 InnoDB存储引擎，它在删除操作时是对⾏删除，不会重建表。Mysql⾼可案有哪些?",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mysql-52",
+              "text": "ession，使 Redis， Memcached。 session 持久化 将 session 存储⾄数据库中，像操作数据⼀样才做 session。 Memcached 和 MySQL 的 query cache 相，有什么优缺点？",
+              "category": "database_mysql",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "database_redis": {
+          "name": "Redis",
+          "enabled": true,
+          "count": 94,
+          "questions": [
+            {
+              "id": "redis-1",
+              "text": "Redis为什么这么快？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "redis-2",
+              "text": "Redis的数据类型有哪些？分别适合什么场景？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "redis-3",
+              "text": "Redis的持久化机制有哪些？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "redis-4",
+              "text": "Redis的缓存穿透、缓存击穿、缓存雪崩是什么？如何解决？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "redis-5",
+              "text": "Redis的集群方案有哪些？",
+              "category": "database_redis",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "redis-6",
+              "text": "Redis的过期删除策略有哪些？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-10",
+              "text": "Redis什么是 Redis?",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-11",
+              "text": "Redis 相 Memcached 有哪些优势？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-12",
+              "text": "Memcache 与 Redis 的区别都有哪些？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-13",
+              "text": "Redis 是单进程单线程的？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-14",
+              "text": "Redis 集群最⼤节点个数是多少？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-15",
+              "text": "Reids 的特点 使 Redis 有哪些好处？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-16",
+              "text": "Redis 的内存完了会发什么？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-17",
+              "text": "Redis 的回收策略（淘汰策略）Redis 的持久化机制是什么？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-18",
+              "text": "Redis 常⻅性能问题和解决案：Redis 过期键的删除策略？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-19",
+              "text": "Redis 的回收策略（淘汰策略）?",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-20",
+              "text": "为什么 Redis 需要把所有数据放到内存中？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-21",
+              "text": "Redis 的同步机制了解么？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-22",
+              "text": "是否使过 Redis 集群，集群的原理是什么？",
+              "category": "database_redis",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-23",
+              "text": "Redis 集群案什么情况下会导致整个集群不可？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-24",
+              "text": "Redis 持的 Java 客户端都有哪些？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-25",
+              "text": "Jedis 与 Redisson 对有什么优缺点？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-26",
+              "text": "Redis 如何设置密码及验证密码？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-27",
+              "text": "说说 Redis 哈希槽的概念？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-28",
+              "text": "Redis 集群的主从复制模型是怎样的？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-29",
+              "text": "Redis 集群会有写操作丢失吗？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-30",
+              "text": "Redis 集群之间是如何复制的？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-31",
+              "text": "Redis 集群如何选择数据库？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-32",
+              "text": "Redis key 的过期时间和永久有效分别怎么设置？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-33",
+              "text": "Redis 回收进程如何⼯作的？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-34",
+              "text": "都有哪些办法可以降低 Redis 的内存使情况呢？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-35",
+              "text": "⼀个 Redis 实例最多能存放多少的 keys？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-36",
+              "text": "List、Set、 Sorted Set 他们最多能存放多少元素？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-37",
+              "text": "Redis 内存数据集⼤⼩上升到⼀定⼤⼩的时候，就会施⾏数据淘汰策略。Redis 最适合的场景？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-38",
+              "text": "假如 Redis ⾥⾯有1 亿个 key，其中有10w 个 key 是以某个固定的已知的前缀开头的，如果将它们全部找出来？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-39",
+              "text": "使过 Redis 做异步队列么，你是怎么的？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-40",
+              "text": "Memcached 与 Redis 的区别？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-41",
+              "text": "Redis 常⻅性能问题和解决案：缓存如何实现⾼并发？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-42",
+              "text": "Redis 和 Memcached 的区别缓存可能出现的问题当查询缓存报错，怎么提⾼可性？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-43",
+              "text": "如果缓存数据在导出导⼊之间过期了，你⼜怎么处理这些数据 呢？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-44",
+              "text": "NoSQL 和 RDBMS 有什么区别？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-45",
+              "text": "ZK 和 Redis 的区别，各⾃有什么优缺点？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-46",
+              "text": "控这些，开发设计您的应，使其在访问数据库失效的情况下，能够试图重连数据库，直⾄其连接到数据库为。最佳的解决案是在您的应代码中检查是否有应对意外的发，论是任何原因导致的启动或连接失效都应考虑在内。Redis 什么是 Redis?",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-47",
+              "text": "据库⾯的另⼀个优点是，相在磁盘上相同的复杂的数据结构，在内存中操作起来⾮常简单，这样 Redis 可以做很多内部复杂性很强的事情。同时，在磁盘格式⾯他们是紧凑的以追加的式产的，因为他们并不需要进⾏随机访问。Redis 的数据类型？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-48",
+              "text": "t，set，Zset，hash 等持事务，操作都是原⼦性，所谓的原⼦性就是对数据的更改要么全部执⾏，要么全部不执⾏丰富的特性：可于缓存，消息，按 key 设置过期时间，过期后将会⾃动删除Redis 相 Memcached 有哪些优势？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-49",
+              "text": "Memcached 所有的值均是简单的字符串，redis 作为其替代者，持更为丰富的数据类Redis 的速度 Memcached 快很Redis 可以持久化其数据 Memcache 与 Redis 的区别都有哪些？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-50",
+              "text": "Redis 有复杂的数据类型。使底层模型不同它们之间底层实现式以及与客户端之间通信的应协议不⼀样。 Redis 直接⾃⼰构建了 VM 机制，因为⼀般的系统调系统函数的话，会浪费⼀定的时间去移动和请求。Redis 是单进程单线程的？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-51",
+              "text": "Redis 是单进程单线程的，redis 利队列技术将并发访问变为串⾏访问，消除了传统数据库串⾏控制的开销。⼀个字符串类型的值能存储最⼤容量是多少？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-52",
+              "text": "答：512M Redis 集群最⼤节点个数是多少？",
+              "category": "database_redis",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_redis-53",
+              "text": "⼀ 个功能加强版的 Memcached 来。 Redis 的主要缺点是数据库容量受到物理内存的限制，不能作海量数据的⾼性 能读写，因此 Redis 适合的场景主要局限在较⼩数据量的⾼性能操作和运算上。 使 Redis 有哪些好处？",
+              "category": "database_redis",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "database_mongodb": {
+          "name": "MongoDB",
+          "enabled": true,
+          "count": 4,
+          "questions": [
+            {
+              "id": "database_mongodb-10",
+              "text": "为什么要在 MongoDB 中使分析器解释⼀下 MongoDB 中的索引是什么？",
+              "category": "database_mongodb",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mongodb-11",
+              "text": "B 中使分析器 MongoDB 中包括了⼀个可以显示数据库中每个操作性能特点的数据库分析 器。通过这个分析器你可以找到预期慢的查询(或写操作);利这⼀信息,如, 可以确定是否需要添加索引。 解释⼀下 MongoDB 中的索引是什么？",
+              "category": "database_mongodb",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "database_mongodb-12",
+              "text": "什么是集合（表） 集合就是⼀组 MongoDB 档？",
+              "category": "database_mongodb",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "database_mongodb-13",
+              "text": "为什么要在 MongoDB 中使分析器 MongoDB 中包括了⼀个可以显示数据库中每个操作性能特点的数据库分析 器？",
+              "category": "database_mongodb",
+              "difficulty": 3,
+              "type": "technical"
+            }
+          ]
+        }
+      }
+    },
+    "message_queue": {
+      "name": "消息队列",
+      "description": "Kafka、RocketMQ等消息中间件",
+      "enabled": true,
+      "categories": {
+        "mq_kafka": {
+          "name": "Kafka",
+          "enabled": false,
+          "count": 40,
+          "questions": [
+            {
+              "id": "mq-kafka-0",
+              "text": "为什么要使 MQ？ 因为项⽬较⼤，做了分布式系统，所有远程服务调请求都是同步执⾏经常出问题，所 以引⼊了 MQ。 RocketMQ 由哪些⻆⾊组成，每个⻆⾊作和特点是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-1",
+              "text": "RocketMQ 由哪些⻆⾊组成，每个⻆⾊作和特点是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-2",
+              "text": "RocketMQ 中的 Topic 和 JMS 的 queue 有什么区别？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-3",
+              "text": "RocketMQ 消费模式有⼏种？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-4",
+              "text": "Broker 如何处理拉取请求的？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-5",
+              "text": "RocketMQ 如何做负载均衡？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-6",
+              "text": "消息重复消费RocketMQ 如何保证消息不丢失Producer 端如何保证消息不丢失Broker 端如何保证消息不丢失Consumer 端如何保证消息不丢失⾼吞吐量下如何优化产者和消费者的性能?",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-7",
+              "text": "KafkaKafka 是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-8",
+              "text": "和其他消息队列相，Kafka 的优势在哪⾥？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-9",
+              "text": "什么是 Producer、Consumer、Broker、Topic、 Partition？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-10",
+              "text": "Kafka 的多副本机制了解吗？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-11",
+              "text": "Kafka 的多分区（Partition）以及多副本（Replica）机制有什么好处呢？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-12",
+              "text": "Zookeeper 在 Kafka 中的作知道吗？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-13",
+              "text": "Kafka 如何保证消息的消费顺序？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-14",
+              "text": "Kafka 如何保证消息不丢失？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-15",
+              "text": "Kafka 判断⼀个节点是否还活着有那两个条件？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-16",
+              "text": "producer 是否直接将数据发送到 broker 的 leader（主节点）？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-17",
+              "text": "Kafka consumer 是否可以消费指定分区消息吗？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-18",
+              "text": "Kafka ⾼效件存储设计特点是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-19",
+              "text": "partition 的数据如何保存到硬盘？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-20",
+              "text": "kafka 产数据时数据的分组策略是怎样的？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-21",
+              "text": "kafka 维护消费状态跟踪的法有什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-22",
+              "text": "是什么确保了 Kafka 中服务器的负载平衡？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-23",
+              "text": "Kafka 系统⼯具有哪些类型？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-24",
+              "text": "partition 的数据如何保存到硬盘Zookeeper 对于 Kafka 的作是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-25",
+              "text": "Kafka 的流处理是什么意思？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-26",
+              "text": "Kafka 集群中保留期的⽬的是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-27",
+              "text": "RabbitMQ RabbitMQ routing 路由模式 消息怎么路由？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-28",
+              "text": "RabbitMQ publish/subscribe 发布订阅(共享资源) 能够在地理上分开的不同数据中⼼使 RabbitMQ cluster 么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-29",
+              "text": "RabbitMQ 有那些基本概念？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-30",
+              "text": "什么是消费者 Consumer?",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-31",
+              "text": "使 pub/sub 主题订阅者模式，可以实现1:N 的消息队列。如果对追问 pub/sub 有什么缺点？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-32",
+              "text": "在消费者下线的情况下，产的消息会丢失，得使专业的消息队列如 RabbitMQ 等。如果对追问 redis 如何实现延时队列？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-33",
+              "text": "因为项⽬较⼤，做了分布式系统，所有远程服务调请求都是同步执⾏经常出问题，所 以引⼊了 MQ。 RocketMQ 由哪些⻆⾊组成，每个⻆⾊作和特点是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-34",
+              "text": "Broker。Broker就是 MQ 本身，负责收发消息、持久化消息等。Consumer消息消费者，负责从 Broker 上拉取消息进⾏消费，消费完进⾏ ack。RocketMQ 中的 Topic 和 JMS 的 queue 有什么区别？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-35",
+              "text": "queue 就是来源于数据结构的 FIFO 队列。⽽ Topic 是个抽象的概念，每个 Topic 底层对 应 N 个 queue，⽽数据也真实存在 queue 上的。 RocketMQ 消费模式有⼏种？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-36",
+              "text": "的各个 Consumer 实例都消费⼀遍。即即使这些Consumer 属于同⼀个 Consumer Group，消息也会被 Consumer Group 中的每个 Consumer 都消费⼀次。Broker 如何处理拉取请求的？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-37",
+              "text": "g 中是否有新消息，有的话写⼊到pullRequestTable。 当有新消息的时候返回请求。 挂起 consumer 的请求，即不断开连接，也不返回数据。 使 consumer 的 offset。 RocketMQ 如何做负载均衡？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-38",
+              "text": "同步刷盘。默认情况下是异步刷盘的。 FLUSHDISKTYPE = SYNC_FLUSH 集群部署，主从模式，⾼可。Consumer 端如何保证消息不丢失 完全消费正常后在进⾏⼿动 ack 确认。 ⾼吞吐量下如何优化产者和消费者的性能?",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "mq-kafka-39",
+              "text": "roup 下，多机部署，并⾏消费 - 单个 Consumer 提⾼消费线程个数 - 批量消费 消息批量拉取业务逻辑批量处理运维 ⽹卡调优 jvm 调优 多线程与 cpu 调优 - Page Cache Kafka Kafka 是什么？",
+              "category": "mq_kafka",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "mq_rocketmq": {
+          "name": "RocketMQ",
+          "enabled": false,
+          "count": 0,
+          "questions": []
+        }
+      }
+    },
+    "backend": {
+      "name": "后端组件",
+      "description": "Docker、Nginx、Elasticsearch等后端常用组件",
+      "enabled": true,
+      "categories": {
+        "backend_docker": {
+          "name": "Docker",
+          "enabled": true,
+          "count": 59,
+          "questions": [
+            {
+              "id": "backend_docker-10",
+              "text": "容器技术为什么需要 DevOpsDocker 是什么？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-11",
+              "text": "Docker 与虚拟机有何不同？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-12",
+              "text": "Docker 容器有⼏种状态？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-13",
+              "text": "Dockerfile 中最常⻅的指令是什么？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-14",
+              "text": "Dockerfile 中的命令 COPY 和 ADD 命令有什么区别？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-15",
+              "text": "解释⼀下 Dockerfile 的 ONBUILD 指令？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-16",
+              "text": "什么是 Docker Swarm？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-17",
+              "text": "如何在产中监控 Docker？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-18",
+              "text": "如何使 Docker 技术创建与环境关的容器系统？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-19",
+              "text": "Dockerfile 配置件中的 COPY 和 ADD 指令有什么不同？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-20",
+              "text": "Docker 映像（image）是什么？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-21",
+              "text": "Docker 容器（container）是什么？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-22",
+              "text": "Docker 中⼼（hub）什么概念？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-23",
+              "text": "在任意给定时间点指出⼀个 Docker 容器可能存在的运⾏阶段？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-24",
+              "text": "有什么法确定⼀个 Docker 容器运⾏状态？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-25",
+              "text": "在 Dockerfile 配置件中最常的指令有哪些？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-26",
+              "text": "什么类型的应（状态性或有状态性）更适合 Docker 容器技术？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-27",
+              "text": "解释基本 Docker 应流程Docker Image 和 Docker Layer (层)有什么不同？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-28",
+              "text": "Docker 群（Swarm）是什么？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-29",
+              "text": "在使 Docker 技术的产品中如何监控其运⾏？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-30",
+              "text": "Docker 技术与虚拟机技术有何不同？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-31",
+              "text": "有否在创建有状态性的 Docker 应的较好实践？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-32",
+              "text": "在 Windows 系统上可以运⾏原的 Docker 容器吗？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-33",
+              "text": "说说容器化技术与虚拟化技术的优缺点 如何使 Docker 适应多种运⾏环境？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-34",
+              "text": "为什么 Docker compose 采取的是并不等待前⾯依赖服务项的容器启动就绪后再启动的组合容器启动策略？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-35",
+              "text": "较⾼的客户满意度评价。完成这样的软件发布模式，开发公司需要做到：增加软件布署的频率降低新发布版本的失败率缩短修复缺陷的交付时间加快解决版本冲突的问题DevOps 满⾜所有这些需求且帮助公司⾼质完成软件缝交付的⽬标。 Docker 是什么？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-36",
+              "text": "容器：将⼀个软件包装在⼀个完整的件系统中，该件系统包含运⾏所需的⼀切：代码，运⾏时，系统⼯具，系统库等。可以安装在服务器上的任何东⻄。这保证软件总是运⾏在相同的运⾏环境，需考虑基础环境配置的改变。 Docker 与虚拟机有何不同？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-37",
+              "text": "up 实现的。Cgroups 不允许容器消耗分配给它们更多的资源。虽然主机的所有资源都在虚拟机中可⻅，但法使。这可以通过在容器和主机上同时运⾏ top 或 htop 来实现。所有环境的输出看起来都很相似。 什么是 Docker 镜像？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-38",
+              "text": "Docker 镜像是 Docker 容器的源代码，Docker 镜像于创建容器。使build 命令创建镜像。什么是 Docker 容器？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-39",
+              "text": "Docker 容器包括应程序及其所有依赖项，作为操作系统的独进程运⾏。Docker 容器有⼏种状态？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-40",
+              "text": "四种状态：运⾏、已暂停、重新启动、已退出。Dockerfile 中最常⻅的指令是什么？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-41",
+              "text": "FROM：指定基础镜像LABEL：功能是为镜像指定标签RUN：运⾏指定的命令CMD：容器启动时要运⾏的命令 Dockerfile 中的命令 COPY 和 ADD 命令有什么区别？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-42",
+              "text": "COPY 与 ADD 的区别 COPY 的 SRC 只能是本地件，其他法⼀致。 解释⼀下 Dockerfile 的 ONBUILD 指令？",
+              "category": "backend_docker",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-43",
+              "text": "作另⼀个镜像构建的基础时，ONBUILD 指令向镜像添加将在稍后执⾏的触发指令。如果要构建将作构建其他镜像的基础的镜像（例如，可以使特定于户的配置⾃定义的应程序构建环境或守护程序），这将⾮常有。 什么是 Docker Swarm？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-44",
+              "text": "将 Docker 主机池转变为单个虚拟Docker 主机。Docker Swarm 提供标准的 Docker API，任何已经与 Docker守护进程通信的⼯具都可以使 Swarm 透明地扩展到多个主机。 如何在产中监控 Docker？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-45",
+              "text": "Docker 守护程序中正在进⾏的活动流。 ⼀些常⻅的 Docker 事件：attach，commit，die，detach，rename，destroy 等。我们还可以使各种选项来限制或过滤我们感兴趣的事件。 DevOps 有哪些优势？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-46",
+              "text": "主要于整合团队开发中不同开发者提交到开发仓库中的项⽬代码变化，并即时整合编译，检查整合编译错误的服务。它需要⼀天中多次整合编译代码的能⼒，若出现整合错误，可以优异地准确定位提交错误源。如何使 Docker 技术创建与环境关的容器系统？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-47",
+              "text": "ocker 技术有三中主要的技术途径辅助完成此需求：存储卷（Volumes）环境变量（Environment variable）注⼊只读（Read-only）件系统Dockerfile 配置件中的 COPY 和 ADD 指令有什么不同？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-48",
+              "text": "诸如，本地归档解压和持远程⽹址访问等），这些特性在指令本身体现并不明显。因此，有必要使 ADD 指令的最好例⼦是需要在本地⾃动解压归档件到容器中的情况，如 ADD rootfs.tar.xz 。Docker 映像（image）是什么？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-49",
+              "text": "stry.hub.docker.com 这样的公共平台上。映像常被分层设计，每层可单独成为⼀个⼩映像，由多层⼩映像再构成⼤映像，这样碎⽚化的设计为了使映像在互联⽹上共享时，最⼩化传输数据需求。Docker 容器（container）是什么？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-50",
+              "text": "是包含其所有运⾏依赖环境，但与其它容器共享操作系统内核的应，它运⾏在独的主机操作系统户空间进程中。Docker 容器并不紧密依赖特定的基础平台：可运⾏在任何配置的计算机，任何平台以及任何云平台上。Docker 中⼼（hub）什么概念？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-51",
+              "text": "像布署到本地主机等任务。它提供了⼀个查找发现 Docker 映像，发布 Docker 映像及控制变化升级的资源中⼼，成为户组或团队协作开发中保证⾃动化开发流程的有效技术途径。在任意给定时间点指出⼀个 Docker 容器可能存在的运⾏阶段？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-52",
+              "text": "在任意时间点，⼀个 Docker 容器可能存在以下运⾏阶段：运⾏中（Running）已暂停（Paused）重启中（Restarting）已退出（Exited） 有什么法确定⼀个 Docker 容器运⾏状态？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-53",
+              "text": "使如下命令⾏命令确定⼀个 Docker 容器的运⾏状态这将列表形式输出运⾏在主机上的所有 Docker 容器及其运⾏状态。从这个列表中很容易找到想要的容器及其运⾏状态。在 Dockerfile 配置件中最常的指令有哪些？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-54",
+              "text": "加功能层，也许最来的层会依赖它。CMD：使 CMD 指令为执⾏的容器提供默认值。在 Dockerfile 件中，若添加多个 CMD 指令，只有最后的 CMD 指令运⾏。什么类型的应（状态性或有状态性）更适合 Docker 容器技术？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-55",
+              "text": "age）。之后，你就可以使 image 去启动运⾏'containers（容器）'。运⾏中的容器在许多⾯，与虚拟机⾮常相似，但容器的运⾏不需要虚拟管理软件的运⾏。Docker Image 和 Docker Layer (层)有什么不同？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-56",
+              "text": "中完成的⼀条配置指令，即表示⼀个 Docker 层（Layer）。如下 Dockerfile 件包含4 条指令，每条指令创建⼀个层（Layer）。$ docker ps –a 重点，每层只对其前⼀层进⾏⼀（某）些进化。虚拟化技术是什么？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-57",
+              "text": "同，对虚拟化技术进⾏分类，主要的有如下3 种虚拟化技术种类：全模拟（Emulation）半虚拟（Paravirtualization）基于容器的虚拟化（Container-based virtualization）虚拟管理层（程序）是什么？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-58",
+              "text": "拟服务器，驱动着虚拟化技术快速发展及⼴泛应。诸如， Xen，VMware，KVM 等，以及商业化的处理器硬件产⼚商也加⼊在硬件层⾯持虚拟化技术的持。诸如，Intel 的 VT 和 AMD-V 。Docker 群（Swarm）是什么？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_docker-59",
+              "text": "提供透明地将 Docker 主机扩散到多台主机上的服务。FROM ubuntu:15.04 COPY ./app RUN make /app CMD python /app/app.py 在使 Docker 技术的产品中如何监控其运⾏？",
+              "category": "backend_docker",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "backend_nginx": {
+          "name": "Nginx",
+          "enabled": true,
+          "count": 10,
+          "questions": [
+            {
+              "id": "backend_nginx-10",
+              "text": "nginx 是如何实现⾼并发的？",
+              "category": "backend_nginx",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-11",
+              "text": "Nginx 配置⾼可性怎么配置？",
+              "category": "backend_nginx",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-12",
+              "text": "错误可能原因在 Nginx 中，解释如何在 URL 中保留双斜线?",
+              "category": "backend_nginx",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-13",
+              "text": "Nginx 服务器上的 Master 和 Worker 进程分别是什么?",
+              "category": "backend_nginx",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-14",
+              "text": "个进程都没⼲完活呢，因此，⼀般有个调度进程，每当 新进来了⼀个 request ，就新开个进程来处理。Nginx 不这样，每进来⼀个 request ，会有⼀个 worker 进程去处理。但不 是全程的处理，处理到什么程度呢？",
+              "category": "backend_nginx",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-15",
+              "text": "t，CSS 等）与后台应分开 部署，提⾼户访问静态代码的速度，降低对后台应访问。这⾥将静态资源 放到 nginx 中，动态资源转发到 tomcat 服务器中,毕竟 Tomcat 的优势是处理 动态请求。nginx 是如何实现⾼并发的？",
+              "category": "backend_nginx",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-16",
+              "text": "每个 request 的⼤部份命都是在⽹络传输中， 实际上花费在 server 机器上的时间⽚不多。这是⼏个进程就解决⾼并发的秘密 所在。即 webserver 刚好属于⽹络 IO 密集型应，不算是计算密集型。Nginx 静态资源?",
+              "category": "backend_nginx",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-17",
+              "text": "静态资源访问，就是存放在 nginx 的 html ⻚⾯，我们可以⾃⼰编写。 Nginx 配置⾼可性怎么配置？",
+              "category": "backend_nginx",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-18",
+              "text": "ying，调整 proxy_buffer_size 16k;proxy_buffers 4 16k;php 脚本执⾏时间过⻓将 php-fpm.conf 的 0s 的 0s 改成⼀个时间在 Nginx 中，解释如何在 URL 中保留双斜线?",
+              "category": "backend_nginx",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_nginx-19",
+              "text": "Master 进程：读取及评估配置和维持 ；Worker 进程：处理请求。Nginx 的优缺点？",
+              "category": "backend_nginx",
+              "difficulty": 3,
+              "type": "technical"
+            }
+          ]
+        },
+        "backend_es": {
+          "name": "Elasticsearch",
+          "enabled": true,
+          "count": 12,
+          "questions": [
+            {
+              "id": "backend_es-10",
+              "text": "Elasticsearch 中的节点（如共 20 个），其中的 10 个选了 ⼀个 master，另外 10 个选了另⼀个 master，怎么办？",
+              "category": "backend_es",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-11",
+              "text": "解释⼀下 Elasticsearch 集群中的 索引的概念 ？",
+              "category": "backend_es",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-12",
+              "text": "你可以列出 Elasticsearch 各种类型的分析器吗？",
+              "category": "backend_es",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-13",
+              "text": "解释⼀下 Elasticsearch Node？",
+              "category": "backend_es",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-14",
+              "text": "在安装 Elasticsearch 时，请说明不同的软件包及其重要性？",
+              "category": "backend_es",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-15",
+              "text": "请解释有关 Elasticsearch 的 NRT？",
+              "category": "backend_es",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-16",
+              "text": "点集合。 这样会负载均衡地把查询发送到对应节点，之后对应节点接收到请求，将document 数据返回协调节点，协调节点把 document 返回给客户端。 您能解释⼀下 X-Pack for Elasticsearch 的功能和重要性吗？",
+              "category": "backend_es",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-17",
+              "text": "的各种功能包括安全性（基于⻆⾊的访问，特权/权限，⻆⾊和户安 全性），监视，报告，警报等。Elasticsearch 中的节点（如共 20 个），其中的 10 个选了 ⼀个master，另外 10 个选了另⼀个 master，怎么办？",
+              "category": "backend_es",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-18",
+              "text": "m_master_nodes）超过所有候选节点⼀半以上 来解决脑裂问题；当候选数量为两个时，只能修改为唯⼀的⼀个 master 候选，其他作为data 节点，避免脑裂问题。 解释⼀下 Elasticsearch 集群中的 索引的概念 ？",
+              "category": "backend_es",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-19",
+              "text": "Elasticsearch 集群可以包含多个索引，与关系数据库相，它们相当于数据库 表。 你可以列出 Elasticsearch 各种类型的分析器吗？",
+              "category": "backend_es",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-20",
+              "text": "数据进⾏搜索和 聚合的操作。客户端节点（或者说：协调节点） 将集群请求转发到主节点，将与数据相 关的请求转发到数据节点。 摄取节点 于在索引之前对档进⾏预处理。 在安装 Elasticsearch 时，请说明不同的软件包及其重要性？",
+              "category": "backend_es",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "backend_es-21",
+              "text": "（节点内存/2, 32GB）; 设置最⼤件句柄数；线程池+队列⼤⼩根据业务需要做调整；磁盘存储 raid 式——存储有条件使 RAID10，增加单节点性能以及避 免单节点存储故障。 请解释有关 Elasticsearch 的 NRT？",
+              "category": "backend_es",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        }
+      }
+    },
+    "architecture": {
+      "name": "架构设计",
+      "description": "微服务、分布式系统、系统设计",
+      "enabled": true,
+      "categories": {
+        "architecture_microservices": {
+          "name": "微服务",
+          "enabled": false,
+          "count": 19,
+          "questions": [
+            {
+              "id": "arch-microservices-0",
+              "text": "图7：微服务的特征–微服务访谈问题什么是领域驱动设计？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-1",
+              "text": "图8： DDD 原理–微服务⾯试问题为什么需要域驱动设计（DDD）？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-2",
+              "text": "说说微服务架构的优势微服务有哪些特点？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-3",
+              "text": "单⽚，SOA 和微服务架构有什么区别？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-4",
+              "text": "说⼀下中间件原理.在使微服务架构时，您⾯临哪些挑战？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-5",
+              "text": "SOA 和微服务架构之间的主要区别是什么？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-6",
+              "text": "为什么需要域驱动设计（DDD）？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-7",
+              "text": "和所选的技术堆栈构建单独的服务组件。就像在蜂箱中⼀样，每个服务组件形成⼀个强⼤的微服务架构，以提供更好的可扩展性。此外，敏捷团队可以单独处理每个服务组件的问题，⽽对整个应程序没有影响或影响最⼩。说说微服务架构的优势 微服务有哪些特点？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-8",
+              "text": "程序视为他们负责的产品分散治理—重点是使正确的⼯具来做正确的⼯作。这意味着没有标准化模式或任何技术模式。开发⼈员可以⾃由选择最有的⼯具来解决他们的问题敏捷—微服务持敏捷开发。任何新功能都可以快速开发并再次丢弃 微服务架构是什么样⼦的?",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-9",
+              "text": ". Trasport 数据传输(序列化和反序列化).11. Logging 志.12. Metrics 指针对每个请求信息的仪表盘化.微服务架构介绍详细的可以参考:Microservice Architectures 微服务架构如何运作？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-10",
+              "text": "请求。静态内容–容纳系统的所有内容。管理–在节点上平衡服务并识别故障。服务发现–查找微服务之间通信路径的指南。内容交付⽹络–代理服务器及其数据中⼼的分布式⽹络。远程服务–启驻留在 IT 设备⽹络上的远程访问信息。微服务架构的优缺点是什么？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-11",
+              "text": "单⼀功能由于远程呼叫⽽增加延迟持单个可部署单元增加了配置和其他操作的⼯作量允许经常发布软件难以保持交易安全确保每项服务的安全性艰难地跨越各种便捷跟踪数据多个服务是并⾏开发和部署的难以在服务之间进⾏编码单⽚，SOA 和微服务架构有什么区别？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-12",
+              "text": "⼀起并紧密封装。⼀个⾯向服务的架构是⼀种相互通信服务的集合。通信可以涉及简单的数据传递，也可以涉及两个或多个协调某些活动的服务。微服务架构是⼀种架构⻛格，它将应程序构建为以业务域为模型的⼩型⾃治服务集合。 怎么做弹性扩缩容，原理是什么?",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-13",
+              "text": "蔽了底层操作系统的复杂性，使程序开发⼈员⾯对⼀个简单⽽统⼀的开发环境，减少程序设 计的复杂性，将注意⼒集中在⾃⼰的业务上，不必再为程序在不同系统软件上的移植⽽重复⼯作，从⽽⼤⼤减少了技术上的负担。 在使微服务架构时，您⾯临哪些挑战？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-14",
+              "text": "以部署，维护，监控和识别问题。它需要在所有组件周围具有很好的感知能⼒。配置管理：有时在各种环境中维护组件的配置变得困难。调试：很难找到错误的每⼀项服务。维护集中式志记录和仪表板以调试问题⾄关重要。SOA 和微服务架构之间的主要区别是什么？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-15",
+              "text": "务可重性专注于解耦传统的关系数据库更常现代关系数据库更常系统的变化需要修改整体系统的变化是创造⼀种新的服务DevOps/Continuous Delivery 正在变得流专注于 DevOps/持续交付⾏，但还不是主流微服务有什么特点？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-16",
+              "text": "您可以列出微服务的特征，如下所示： 图7：微服务的特征–微服务访谈问题什么是领域驱动设计？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-17",
+              "text": "图9：我们需要 DDD 的因素–微服务⾯试问题 什么是所不在的语⾔？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            },
+            {
+              "id": "arch-microservices-18",
+              "text": "是⼀种帮助计算机系统通过 Internet 进⾏通信的架构⻛格。这使得微服务更容易理解和实现。微服务可以使或不使 RESTful API 实现，但使 RESTful API 构建松散耦合的微服务总是更容易。什么是不同类型的微服务测试？",
+              "category": "architecture_microservices",
+              "difficulty": 4,
+              "type": "technical"
+            }
+          ]
+        },
+        "architecture_distributed": {
+          "name": "分布式系统",
+          "enabled": false,
+          "count": 21,
+          "questions": [
+            {
+              "id": "arch-distributed-0",
+              "text": "使过 Redis 分布式锁么，它是什么回事假如 Redis ⾥⾯有 1 亿个 key，其中有 10w 个 key 是以某个固定的已知的前缀开头的，如果将它们全部找出来？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-1",
+              "text": "分布式分布式服务接⼝的幂等性如何设计？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-2",
+              "text": "分布式系统中的接⼝调如何保证顺序性？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-3",
+              "text": "说说 ZooKeeper ⼀般都有哪些使场景？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-4",
+              "text": "说说你们的分布式 session 案是啥？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-5",
+              "text": "那常⻅的分布式锁有哪些解决案？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-6",
+              "text": "你了解业界哪些⼤公司的分布式锁框架请讲⼀下你对 CAP 理论的理解请讲⼀下你对 BASE 理论的理解分布式与集群的区别是什么？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-7",
+              "text": "提交偏移量，因此如果节点在任何情况下都失败了，它都可以从 之前提交的偏移量中获取。 除此之外，它还执⾏其他活动，如: leader 检测、分布式同步、配置管理、识别新节点 何时离开或连接、集群、节点实时状态等等。 流 API 的作是什么？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-8",
+              "text": "于插⼊档的命令语法是 database.collection.insert（档）。 如果在⼀个分⽚（shard）停或者很慢的时候,我发起⼀个查询 会怎样?",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-9",
+              "text": "逻辑处理，如说，如果有⼀个订单已经付了，就已经有了⼀条付流，那么如果重复发送这个请求，则此时先插⼊付流，order id 已经存在了，唯⼀键约束效，报错插⼊不进去得。然后你就不再扣款了。分布式系统中的接⼝调如何保证顺序性？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-10",
+              "text": "可以接⼊ MQ，如果是系统 A使多线程处理的话，可以使内存队列，来保证顺序性，如果你要100%的顺序性，当然可以使分布式锁来搞，会影响系统的并发性。 分布式锁实现原理，过吗？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-11",
+              "text": "edis式。上⾯的三种实现式，没有在所有场合都是完美的，所以，应根据不同的应场景选择最适合的实现式。在分布式环境中，对资源进⾏上锁有时候是很重要的，如抢购某⼀资源，这时候使分布式锁就可以很好地控制资源。Etcd怎么实现分布式锁?",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-12",
+              "text": "。简单：基于 HTTP+JSON 的 API 让你 curl 就可以轻松使。安全：可选 SSL 客户认证机制。快速：每个实例每秒持⼀千次写操作。可信：使 Raft 算法充分实现了分布式。但是这⾥我们主要讲述Etcd如何实现分布式锁?",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-13",
+              "text": "⾼可性：这个应该是很常⻅的，如 hdfs，yarn 等很多⼤数据系统，都选择基于 zk 来开发 HA⾼可机制，就是⼀个重要进程⼀般会主备两个，主进程挂了⻢通过 zk 感知到切换到备份进程。说说你们的分布式 session 案是啥？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-14",
+              "text": "on 的过滤器，这样的话，session 相关操作都会交给 spring session 来管了。接着在代码中，就是原的 session 操作，就是直接基于 spring session 从 redis 中获取数据了。分布式事务了解吗？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-15",
+              "text": "段：这个阶段说的是在各个服务中执⾏实际的操作Cancel 阶段：如果任何⼀个服务的业务法执⾏出错，那么这⾥就需要进⾏补偿，就是执⾏已经成功的业务逻辑的回滚操作本地消息表可靠消息最终⼀致性案最⼤努⼒通知案那常⻅的分布式锁有哪些解决案？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-16",
+              "text": "Reids 的分布式锁，很多⼤公司会基于 Reidis 做扩展开发基于 Zookeeper 基于数据库，如 Mysql ZK 和 Redis 的区别，各⾃有什么优缺点？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-17",
+              "text": "导致锁被错误的释放（导致被其他线程错误地持有），因此 ZooKeeper 也法保证完全⼀致。ZK具有较好的稳定性；响应时间抖动很⼩，没有出现异常。但是随着并发量和业务数量的提升其响应时间和 qps 会明显下降。MySQL 如何做分布式锁？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-18",
+              "text": "“主要可”。针对数据库领域，BASE思想的主要实现是对业务数据进⾏拆分，让不同的数据分布在不同的机器上，以提升系统的可性，当前主要有以下两种做法：按功能划分数据库分⽚（如开源的 Mycat、Amoeba等）。 分布式与集群的区别是什么？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-19",
+              "text": "数据可靠。ClickHouse 中副本数可按需建设，且逻辑上不同 Shard 内的副本数可不同。ZooKeeper Service。集群所有节点对等，节点间通过 ZooKeeper 服务进⾏分布式协调。ClickHouse 的逻辑数据模型？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "arch-distributed-20",
+              "text": "如何实现分布式锁?因为 Etcd 使 Raft 算法保持了数据的强⼀致性？",
+              "category": "architecture_distributed",
+              "difficulty": 5,
+              "type": "technical"
+            }
+          ]
+        },
+        "system_design": {
+          "name": "系统设计",
+          "enabled": true,
+          "count": 189,
+          "questions": [
+            {
+              "id": "design-1",
+              "text": "设计一个秒杀系统，要求支持10万QPS，如何保证不超卖？",
+              "category": "system_design",
+              "difficulty": 5,
+              "type": "design"
+            },
+            {
+              "id": "design-2",
+              "text": "如何设计一个短链接服务？",
+              "category": "system_design",
+              "difficulty": 4,
+              "type": "design"
+            },
+            {
+              "id": "design-3",
+              "text": "设计一个消息推送系统，支持千万级用户",
+              "category": "system_design",
+              "difficulty": 5,
+              "type": "design"
+            },
+            {
+              "id": "design-4",
+              "text": "设计一个分布式ID生成器",
+              "category": "system_design",
+              "difficulty": 4,
+              "type": "design"
+            },
+            {
+              "id": "design-5",
+              "text": "如何设计一个高并发的计数器系统？",
+              "category": "system_design",
+              "difficulty": 4,
+              "type": "design"
+            },
+            {
+              "id": "design-6",
+              "text": "设计一个实时排行榜系统",
+              "category": "system_design",
+              "difficulty": 4,
+              "type": "design"
+            },
+            {
+              "id": "system_design-10",
+              "text": "连nil切⽚和空切⽚⼀不⼀样都不清楚？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-11",
+              "text": "为什么json包不能导出私有变量的tag？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-12",
+              "text": "昨天那个在for循环⾥append元素的同事，今天还在么？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-13",
+              "text": "将整数转换为浮点数。Log包线程安全吗？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-14",
+              "text": "缓冲 Chan 的发送和接收是否同步?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-15",
+              "text": "三种锁，读写锁，互斥锁，还有map的安全的锁?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-16",
+              "text": "读写锁或者互斥锁读的时候能写吗?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-17",
+              "text": "Printf(),Sprintf(),FprintF()都是格式化输出，有什么不同？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-18",
+              "text": "怎么做弹性扩缩容，原理是什么?",
+              "category": "system_design",
+              "difficulty": 5,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-19",
+              "text": "什么是 REST / RESTful 以及它的途是什么？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-20",
+              "text": "什么是半虚拟化（Paravirtualization）？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-21",
+              "text": "请解释⼀下 docerfile 配置件中的 ONBUILD 指令的途含义？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-22",
+              "text": "⼀个字符串类型的值能存储最⼤容量是多少？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-23",
+              "text": "为什么 edis 需要把所有数据放到内存中？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-24",
+              "text": "Pipeline 有什么好处，为什么要 Pipeline？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-25",
+              "text": "如果有⼤量的 key 需要设置同⼀时间过期，⼀般需要注意什么？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-26",
+              "text": "B+ Tree 索引和 Hash 索引区别？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-27",
+              "text": "char 和 varchar 的区别？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-28",
+              "text": "使索引查询⼀定能提⾼查询的性能吗？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-29",
+              "text": "为什么百万级别或以上的数据如何删除什么是最左前缀原则？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-30",
+              "text": "什么是最左匹配原则什么是聚簇索引？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-31",
+              "text": "谈谈 SQL 优化的经验什么叫外链接？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-32",
+              "text": "使 union 和 union all 时需要注意些什么？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-33",
+              "text": "什么是 Root 帐户什么是 LILO？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-34",
+              "text": "建软链接(快捷式)，以及硬链接的命令。⽬录创建什么命令？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-35",
+              "text": "怎么向屏幕输出带空格的字符串，如”hello world”?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-36",
+              "text": "⿊洞件是哪个件夹下的哪个命令？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-37",
+              "text": "如果需要连⽬录及⽬录下件⼀块删除呢？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-38",
+              "text": "什么命令对⼀个件的内容进⾏统计？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-39",
+              "text": "(⾏号、单词数、字节数)Grep 命令有什么？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-40",
+              "text": "在 ps 显示出来的信息中，分别什么符号表示的？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-41",
+              "text": "利 ps 怎么显示所有的进程?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-42",
+              "text": "怎么利 ps 查看指定进程的信息？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-43",
+              "text": "把后台任务调到前台执⾏使什么命令?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-44",
+              "text": "把停下的后台任务在后台执⾏起来什么命令?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-45",
+              "text": "查看当前谁在使该主机什么命令?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-46",
+              "text": "查找⾃⼰所在的终端信息什么命令?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-47",
+              "text": "使什么命令查看 ip 地址及接⼝信息？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-48",
+              "text": "查找命令的可执⾏件是去哪查找的?",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-49",
+              "text": "du 和 df 的定义，以及区别？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-50",
+              "text": "awk 详解。当你需要给命令绑定⼀个宏或者按键的时候，应该怎么做呢？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-51",
+              "text": "如果你的助⼿想要打印出当前的⽬录栈，你会建议他怎么做？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-52",
+              "text": "你的系统⽬前有许多正在运⾏的任务，在不重启机器的条件下，有什么法可以把所有正在运⾏的进程移除呢？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            },
+            {
+              "id": "system_design-53",
+              "text": "哪⼀个bash内置命令能够进⾏数学运算。怎样⼀⻚⼀⻚地查看⼀个⼤件的内容呢？",
+              "category": "system_design",
+              "difficulty": 3,
+              "type": "technical"
+            }
+          ]
+        }
+      }
+    },
+    "project": {
+      "name": "项目经历",
+      "description": "项目深挖、实际经验",
+      "enabled": true,
+      "categories": {
+        "project_experience": {
+          "name": "项目经历",
+          "enabled": true,
+          "count": 3,
+          "questions": [
+            {
+              "id": "project-1",
+              "text": "请介绍你最近参与的最有挑战性的项目",
+              "category": "project_experience",
+              "difficulty": 4,
+              "type": "project"
+            },
+            {
+              "id": "project-2",
+              "text": "你提到做过性能优化，能具体说说吗？",
+              "category": "project_experience",
+              "difficulty": 4,
+              "type": "project"
+            },
+            {
+              "id": "project-3",
+              "text": "项目中遇到过什么线上故障？如何处理的？",
+              "category": "project_experience",
+              "difficulty": 4,
+              "type": "project"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

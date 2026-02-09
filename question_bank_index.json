@@ -1,0 +1,163 @@
+{
+  "version": "1.0",
+  "description": "题库分类索引（用于动态加载）",
+  "groups": {
+    "basics": {
+      "name": "计算机基础",
+      "description": "操作系统、计算机网络、数据结构与算法等基础知识",
+      "enabled": true,
+      "categories": {
+        "basics_os": {
+          "name": "操作系统",
+          "enabled": true,
+          "count": 2,
+          "file": "questions/basics_os.json"
+        },
+        "basics_network": {
+          "name": "计算机网络",
+          "enabled": true,
+          "count": 7,
+          "file": "questions/basics_network.json"
+        },
+        "basics_linux": {
+          "name": "Linux",
+          "enabled": true,
+          "count": 41,
+          "file": "questions/basics_linux.json"
+        }
+      }
+    },
+    "languages": {
+      "name": "编程语言",
+      "description": "Go、Java、Python等编程语言特性",
+      "enabled": true,
+      "categories": {
+        "language_go": {
+          "name": "Go语言",
+          "enabled": true,
+          "count": 85,
+          "file": "questions/language_go.json"
+        },
+        "language_java": {
+          "name": "Java",
+          "enabled": false,
+          "count": 0,
+          "file": "questions/language_java.json"
+        },
+        "language_python": {
+          "name": "Python",
+          "enabled": false,
+          "count": 0,
+          "file": "questions/language_python.json"
+        }
+      }
+    },
+    "databases": {
+      "name": "数据库",
+      "description": "MySQL、Redis、MongoDB等数据库技术",
+      "enabled": true,
+      "categories": {
+        "database_mysql": {
+          "name": "MySQL",
+          "enabled": true,
+          "count": 55,
+          "file": "questions/database_mysql.json"
+        },
+        "database_redis": {
+          "name": "Redis",
+          "enabled": true,
+          "count": 94,
+          "file": "questions/database_redis.json"
+        },
+        "database_mongodb": {
+          "name": "MongoDB",
+          "enabled": true,
+          "count": 4,
+          "file": "questions/database_mongodb.json"
+        }
+      }
+    },
+    "message_queue": {
+      "name": "消息队列",
+      "description": "Kafka、RocketMQ等消息中间件",
+      "enabled": true,
+      "categories": {
+        "mq_kafka": {
+          "name": "Kafka",
+          "enabled": true,
+          "count": 40,
+          "file": "questions/mq_kafka.json"
+        },
+        "mq_rocketmq": {
+          "name": "RocketMQ",
+          "enabled": false,
+          "count": 0,
+          "file": "questions/mq_rocketmq.json"
+        }
+      }
+    },
+    "backend": {
+      "name": "后端组件",
+      "description": "Docker、Nginx、Elasticsearch等后端常用组件",
+      "enabled": true,
+      "categories": {
+        "backend_docker": {
+          "name": "Docker",
+          "enabled": true,
+          "count": 59,
+          "file": "questions/backend_docker.json"
+        },
+        "backend_nginx": {
+          "name": "Nginx",
+          "enabled": true,
+          "count": 10,
+          "file": "questions/backend_nginx.json"
+        },
+        "backend_es": {
+          "name": "Elasticsearch",
+          "enabled": true,
+          "count": 12,
+          "file": "questions/backend_es.json"
+        }
+      }
+    },
+    "architecture": {
+      "name": "架构设计",
+      "description": "微服务、分布式系统、系统设计",
+      "enabled": true,
+      "categories": {
+        "architecture_microservices": {
+          "name": "微服务",
+          "enabled": true,
+          "count": 19,
+          "file": "questions/architecture_microservices.json"
+        },
+        "architecture_distributed": {
+          "name": "分布式系统",
+          "enabled": true,
+          "count": 21,
+          "file": "questions/architecture_distributed.json"
+        },
+        "system_design": {
+          "name": "系统设计",
+          "enabled": true,
+          "count": 189,
+          "file": "questions/system_design.json"
+        }
+      }
+    },
+    "project": {
+      "name": "项目经历",
+      "description": "项目深挖、实际经验",
+      "enabled": true,
+      "categories": {
+        "project_experience": {
+          "name": "项目经历",
+          "enabled": true,
+          "count": 3,
+          "file": "questions/project_experience.json"
+        }
+      }
+    }
+  }
+}
