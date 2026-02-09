@@ -1,0 +1,19 @@
+/* ResumeUpload.css */
+
+.upload-area {
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  transform: scale(1.02);
+}
+
+.skill-chip {
+  margin: 4px;
+  transition: all 0.2s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}

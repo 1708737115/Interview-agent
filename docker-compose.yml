@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: interview-agent-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://interview_agent:interview_agent_pass@postgres:5432/interview_agent
+      - CHROMA_DB_PATH=/app/chroma_db
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./uploads:/app/uploads
+    depends_on:
+      - postgres
+      - chromadb
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: interview-agent-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  postgres:
+    image: ankane/pgvector:latest
+    container_name: interview-agent-postgres
+    environment:
+      POSTGRES_USER: interview_agent
+      POSTGRES_PASSWORD: interview_agent_pass
+      POSTGRES_DB: interview_agent
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: interview-agent-chromadb
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  chroma_data:

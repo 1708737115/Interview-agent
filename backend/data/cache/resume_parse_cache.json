@@ -1,0 +1,121 @@
+{
+  "structured_7167d60b27730fa90e4912bfff400883": {
+    "name": "张三",
+    "phone": "13800138000",
+    "email": "zhangsan@example.com",
+    "education": [
+      {
+        "school": "北京大学",
+        "major": "计算机科学与技术",
+        "degree": "本科",
+        "graduation_year": "2022"
+      }
+    ],
+    "work_experience": [
+      {
+        "company": "字节跳动",
+        "position": "后端开发工程师",
+        "duration": "2022.07-至今",
+        "responsibilities": [
+          "负责抖音电商订单系统的开发和维护",
+          "参与设计高并发订单处理架构，支持日订单量100万+",
+          "优化数据库性能，SQL查询性能提升50%",
+          "使用Go语言重构核心服务，降低延迟30%"
+        ],
+        "achievements": [
+          "优化数据库性能，SQL查询性能提升50%",
+          "使用Go语言重构核心服务，降低延迟30%"
+        ]
+      },
+      {
+        "company": "阿里巴巴",
+        "position": "Java开发实习生",
+        "duration": "2021.07-2021.12",
+        "responsibilities": [
+          "参与淘宝购物车服务开发",
+          "使用Spring Boot开发微服务接口",
+          "学习Redis缓存和MySQL优化"
+        ],
+        "achievements": []
+      }
+    ],
+    "skills": {
+      "programming_languages": [
+        "Go",
+        "Java",
+        "Python"
+      ],
+      "frameworks": [
+        "Gin",
+        "Spring Boot",
+        "GORM"
+      ],
+      "databases": [
+        "MySQL",
+        "Redis",
+        "MongoDB"
+      ],
+      "middleware": [
+        "Kafka",
+        "RocketMQ"
+      ],
+      "tools": [
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "Prometheus"
+      ]
+    },
+    "projects": [
+      {
+        "name": "电商订单系统重构",
+        "description": "重构抖音电商订单系统，支持高并发场景",
+        "tech_stack": [
+          "Go",
+          "MySQL",
+          "Redis",
+          "Kafka",
+          "Kubernetes"
+        ],
+        "role": "负责订单创建和支付模块开发",
+        "highlights": [
+          "系统QPS从1000提升到5000",
+          "稳定性99.99%"
+        ],
+        "challenges": []
+      },
+      {
+        "name": "分布式ID生成服务",
+        "description": "设计并实现分布式ID生成服务，替代数据库自增ID",
+        "tech_stack": [
+          "Go",
+          "Snowflake算法",
+          "etcd"
+        ],
+        "role": "独立负责服务设计和开发",
+        "highlights": [
+          "支持每秒10万ID生成",
+          "无单点故障"
+        ],
+        "challenges": []
+      }
+    ]
+  },
+  "assess_7167d60b27730fa90e4912bfff400883": {
+    "level": "中级",
+    "years_of_experience": 3.5,
+    "reasoning": "候选人拥有3.5年工作经验，在字节跳动负责高并发订单系统，具备Go和Java实战经验，有性能优化和架构设计能力，但缺乏大规模分布式系统设计经验。",
+    "strengths": [
+      "高并发系统优化经验（订单系统QPS提升5倍）",
+      "多语言开发能力（Go/Java/Python）",
+      "性能调优实战（SQL优化50%，延迟降低30%）"
+    ],
+    "skill_gaps": [
+      "缺乏云原生架构设计经验",
+      "机器学习/AI相关技术栈缺失"
+    ],
+    "project_quality": "高",
+    "tech_depth": "中",
+    "recommendation": "建议重点考察分布式系统设计能力和架构思维，可增加系统设计题和性能调优场景题的面试环节。"
+  }
+}
