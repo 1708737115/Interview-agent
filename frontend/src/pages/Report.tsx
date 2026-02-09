@@ -15,6 +15,9 @@ import {
   ListItemIcon,
   ListItemText,
   Avatar,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from '@mui/material'
 import {
   Download as DownloadIcon,
@@ -26,6 +29,8 @@ import {
   TrendingUp as TrendingIcon,
   Psychology as SkillIcon,
   School as LearnIcon,
+  MenuBook as MenuBookIcon,
+  ExpandMore as ExpandMoreIcon,
 } from '@mui/icons-material'
 import { useApp } from '../App'
 import './Report.css'
@@ -444,6 +449,120 @@ export default function Report() {
                   </ListItem>
                 ))}
               </List>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* 复盘分析 */}
+        <Grid item xs={12}>
+          <Card elevation={2}>
+            <CardContent>
+              <Typography variant="h6" gutterBottom color="primary.main">
+                <MenuBookIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
+                面试复盘
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                对比你的回答与参考答案，找出知识盲点
+              </Typography>
+              <Divider sx={{ mb: 2 }} />
+              
+              {questionEvaluations.filter((q: any) => q.standardAnswer).length > 0 ? (
+                <>
+                  <Alert severity="info" sx={{ mb: 3 }}>
+                    <Typography variant="body2">
+                      以下题目提供参考答案对比，帮助你了解标准回答应该包含的要点
+                    </Typography>
+                  </Alert>
+                  
+                  {questionEvaluations
+                    .filter((q: any) => q.standardAnswer)
+                    .map((detail: any, index: number) => (
+                    <Accordion key={index} sx={{ mb: 2 }}>
+                      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                        <Box display="flex" alignItems="center" width="100%" pr={2}>
+                          <Typography variant="body1" fontWeight={500} sx={{ flex: 1 }}>
+                            {detail.questionText || detail.question}
+                          </Typography>
+                          <Chip 
+                            label={`${detail.score}分`} 
+                            size="small" 
+                            color={detail.score >= 70 ? 'success' : detail.score >= 60 ? 'warning' : 'error'}
+                            sx={{ ml: 2 }}
+                          />
+                          {detail.coverage !== undefined && (
+                            <Chip 
+                              label={`覆盖率${detail.coverage}%`} 
+                              size="small" 
+                              variant="outlined"
+                              sx={{ ml: 1 }}
+                            />
+                          )}
+                        </Box>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Box mb={3}>
+                          <Typography variant="subtitle2" color="primary.main" gutterBottom>
+                            你的回答：
+                          </Typography>
+                          <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.50' }}>
+                            <Typography variant="body2">
+                              {detail.userAnswer || '（未记录回答内容）'}
+                            </Typography>
+                          </Paper>
+                        </Box>
+                        
+                        <Box mb={3}>
+                          <Typography variant="subtitle2" color="success.main" gutterBottom>
+                            参考答案：
+                          </Typography>
+                          <Paper variant="outlined" sx={{ p: 2, bgcolor: 'success.light', color: 'success.contrastText' }}>
+                            <Typography variant="body2">
+                              {detail.standardAnswer}
+                            </Typography>
+                          </Paper>
+                        </Box>
+                        
+                        {detail.keyPoints && detail.keyPoints.length > 0 && (
+                          <Box>
+                            <Typography variant="subtitle2" gutterBottom>
+                              关键点覆盖分析：
+                            </Typography>
+                            <Box display="flex" flexWrap="wrap" gap={1}>
+                              {detail.keyPoints.map((point: string, idx: number) => (
+                                <Chip
+                                  key={idx}
+                                  label={point}
+                                  size="small"
+                                  color={detail.coveredPoints?.includes(point) ? 'success' : 'default'}
+                                  variant={detail.coveredPoints?.includes(point) ? 'filled' : 'outlined'}
+                                />
+                              ))}
+                            </Box>
+                            
+                            {detail.missedPoints && detail.missedPoints.length > 0 && (
+                              <Box mt={2}>
+                                <Typography variant="body2" color="warning.main">
+                                  💡 遗漏要点：{detail.missedPoints.join('、')}
+                                </Typography>
+                              </Box>
+                            )}
+                          </Box>
+                        )}
+                        
+                        <Box mt={2}>
+                          <Typography variant="body2" color="text.secondary">
+                            <strong>评分反馈：</strong>{detail.feedback}
+                          </Typography>
+                        </Box>
+                      </AccordionDetails>
+                    </Accordion>
+                  ))}
+                </>
+              ) : (
+                <Alert severity="info">
+                  当前题库暂不提供参考答案对比功能。建议根据评分反馈自行查漏补缺。
+                </Alert>
+              )}
             </CardContent>
           </Card>
         </Grid>
