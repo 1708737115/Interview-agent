@@ -28,6 +28,10 @@ BASE_DIR = Path("/home/fengxu/mylib/interview-agent/backend")
 DATA_DIR = BASE_DIR / "data"
 REPOS_DIR = DATA_DIR / "repos"
 PROCESSED_DIR = DATA_DIR / "processed"
+
+# 添加app目录到Python路径（用于Pylance识别导入）
+sys.path.insert(0, str(BASE_DIR / "app"))
+
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
 # 核心仓库列表
@@ -108,7 +112,6 @@ class SimpleBuilder:
     
     def _parse_all_repos(self):
         """解析所有仓库"""
-        sys.path.insert(0, str(BASE_DIR / "app"))
         from knowledge_base.markdown_parser import MarkdownParser
         
         parser = MarkdownParser()
