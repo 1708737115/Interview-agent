@@ -50,107 +50,21 @@ const MAX_RESUME_SIZE = 10
 const MAX_SUPPORTING_SIZE = 50
 const MAX_SUPPORTING_FILES = 3
 
-// 模拟API调用 - 根据文件名动态生成解析结果
-const mockParseResume = async (file: File): Promise<any> => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      // 从文件名提取候选人姓名（去掉扩展名和常见前缀）
-      let candidateName = '候选人'
-      const fileName = file.name.replace(/\.[^/.]+$/, '') // 去掉扩展名
-      
-      // 尝试提取中文名（2-4个汉字）
-      const chineseNameMatch = fileName.match(/[\u4e00-\u9fa5]{2,4}/)
-      if (chineseNameMatch) {
-        candidateName = chineseNameMatch[0]
-      } else {
-        // 尝试提取英文名（假设是英文名）
-        const englishNameMatch = fileName.match(/^[a-zA-Z\s]+/)
-        if (englishNameMatch && englishNameMatch[0].length > 1) {
-          candidateName = englishNameMatch[0].trim()
-        }
-      }
-      
-      // 随机生成经验年限（1-8年）
-      const years = Math.floor(Math.random() * 8) + 1
-      
-      // 根据经验年限确定职级
-      let level = '初级'
-      if (years >= 3 && years < 5) level = '中级'
-      else if (years >= 5) level = '高级'
-      
-      // 随机生成手机号（隐藏中间4位）
-      const phonePrefix = ['138', '139', '150', '186', '188'][Math.floor(Math.random() * 5)]
-      const phoneSuffix = Math.floor(Math.random() * 9000 + 1000).toString()
-      
-      // 生成邮箱
-      const emailDomains = ['gmail.com', 'qq.com', '163.com', 'outlook.com']
-      const randomDomain = emailDomains[Math.floor(Math.random() * emailDomains.length)]
-      const emailPrefix = Math.random().toString(36).substring(2, 8)
-      
-      // 技能栈组合
-      const skillSets = [
-        {
-          programming_languages: ['Go', 'Java'],
-          databases: ['MySQL', 'Redis'],
-          frameworks: ['Gin', 'Spring Boot'],
-          middleware: ['Kafka'],
-        },
-        {
-          programming_languages: ['Python', 'Go'],
-          databases: ['PostgreSQL', 'MongoDB'],
-          frameworks: ['Django', 'Gin'],
-          middleware: ['RabbitMQ'],
-        },
-        {
-          programming_languages: ['Java', 'Kotlin'],
-          databases: ['MySQL', 'Oracle'],
-          frameworks: ['Spring Cloud', 'MyBatis'],
-          middleware: ['RocketMQ', 'Nacos'],
-        },
-        {
-          programming_languages: ['Go', 'Rust'],
-          databases: ['Redis', 'TiDB'],
-          frameworks: ['Gin', 'gRPC'],
-          middleware: ['Kafka', 'Etcd'],
-        },
-      ]
-      
-      const randomSkillSet = skillSets[Math.floor(Math.random() * skillSets.length)]
-      
-      resolve({
-        name: candidateName,
-        phone: `${phonePrefix}****${phoneSuffix}`,
-        email: `${emailPrefix}@${randomDomain}`,
-        education: [
-          {
-            school: ['清华大学', '北京大学', '复旦大学', '上海交通大学', '浙江大学'][Math.floor(Math.random() * 5)],
-            major: ['计算机科学与技术', '软件工程', '信息安全', '数据科学'][Math.floor(Math.random() * 4)],
-            degree: ['本科', '硕士'][Math.floor(Math.random() * 2)],
-            graduation_year: (2024 - years - Math.floor(Math.random() * 3)).toString(),
-          },
-        ],
-        work_experience: [
-          {
-            company: ['字节跳动', '阿里巴巴', '腾讯', '美团', '京东'][Math.floor(Math.random() * 5)],
-            position: '后端开发工程师',
-            duration: `${2024 - years}.0${Math.floor(Math.random() * 9 + 1)}-至今`,
-          },
-        ],
-        skills: randomSkillSet,
-        estimated_level: level,
-        years_of_experience: years,
-        interview_strategy: {
-          focus_areas: [
-            `${randomSkillSet.programming_languages[0]}语言核心特性`,
-            `${randomSkillSet.databases[0]}性能优化`,
-            `${randomSkillSet.middleware[0]}高级应用`,
-          ],
-          difficulty_adjustment: '正常',
-          scenario_design: '微服务架构下的订单系统',
-        },
-      })
-    }, 2000)
+// 简历解析API调用
+const parseResumeAPI = async (file: File): Promise<any> => {
+  const formData = new FormData()
+  formData.append('file', file)
+  
+  const response = await fetch('/api/resume/parse', {
+    method: 'POST',
+    body: formData,
   })
+  
+  if (!response.ok) {
+    throw new Error(`API错误: ${response.status}`)
+  }
+  
+  return await response.json()
 }
 
 export default function InterviewSetup() {
@@ -218,8 +132,8 @@ export default function InterviewSetup() {
         })
       }, 200)
 
-      // 调用解析API
-      const result = await mockParseResume(file)
+      // 调用API解析简历
+      const result = await parseResumeAPI(file)
       
       clearInterval(progressInterval)
       setUploadProgress(100)
