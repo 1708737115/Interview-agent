@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first for better caching
-COPY requirements.txt .
+# Copy backend requirements first for better caching
+COPY backend/requirements.txt .
 
 # Install Python dependencies with retry
 RUN pip install --upgrade pip && \
@@ -20,23 +20,24 @@ RUN pip install --upgrade pip && \
 # Install PDF parsing dependency
 RUN pip install --no-cache-dir PyPDF2
 
-# Copy application code
-COPY app/ ./app/
+# Copy backend application code
+COPY backend/app/ ./app/
 
-# Copy data files
-COPY data/ ./data/
+# Copy backend data files
+COPY backend/data/ ./data/
 
 # Copy entrypoint script
-COPY docker-entrypoint.sh /app/docker-entrypoint.sh
+COPY backend/docker-entrypoint.sh /app/docker-entrypoint.sh
 RUN chmod +x /app/docker-entrypoint.sh
 
 # Create directories for uploads and data
 RUN mkdir -p uploads data question_pdfs
 
-# Copy base question bank
+# Copy question bank files from project root
 COPY question_bank_config.json /app/question_bank_config.json
+COPY question_bank_light.json /app/question_bank_light.json
 
-# Copy PDF import script
+# Copy PDF import script from project root
 COPY import_pdf_questions.py /app/import_pdf_questions.py
 
 # Expose port
