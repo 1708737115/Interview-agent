@@ -38,6 +38,7 @@ import {
   ArrowBack as BackIcon,
   ArrowForward as NextIcon,
   Edit as EditIcon,
+  Refresh as RefreshIcon,
 } from '@mui/icons-material'
 import { useDropzone } from 'react-dropzone'
 import { useApp } from '../App'
@@ -262,6 +263,21 @@ export default function InterviewSetup() {
     }
   }
 
+  // 重新上传简历
+  const handleReuploadResume = () => {
+    setResumeData(null)
+    setActiveStep(0)
+    setError(null)
+    setUploadProgress(0)
+  }
+
+  // 清除所有辅助材料
+  const handleClearAllSupporting = () => {
+    if (confirm('确定要删除所有已上传的辅助材料吗？')) {
+      setSupportingMaterials([])
+    }
+  }
+
   const handleNext = () => {
     if (activeStep === steps.length - 1) {
       // 开始面试
@@ -351,9 +367,34 @@ export default function InterviewSetup() {
         </Paper>
       ) : (
         <Fade in={true}>
-          <Alert severity="success" icon={<SuccessIcon />} sx={{ mb: 3 }}>
-            简历解析成功！已提取 {resumeData.name} 的信息
-          </Alert>
+          <Box>
+            <Alert 
+              severity="success" 
+              icon={<SuccessIcon />} 
+              sx={{ mb: 2 }}
+              action={
+                <Button
+                  color="inherit"
+                  size="small"
+                  startIcon={<RefreshIcon />}
+                  onClick={handleReuploadResume}
+                >
+                  重新上传
+                </Button>
+              }
+            >
+              简历解析成功！已提取 {resumeData.name} 的信息
+            </Alert>
+            
+            <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.50' }}>
+              <Typography variant="body2" color="text.secondary">
+                <strong>姓名：</strong>{resumeData.name}<br/>
+                <strong>电话：</strong>{resumeData.phone}<br/>
+                <strong>邮箱：</strong>{resumeData.email}<br/>
+                <strong>经验：</strong>{resumeData.years_of_experience}年 | {resumeData.estimated_level}工程师
+              </Typography>
+            </Paper>
+          </Box>
         </Fade>
       )}
 
@@ -413,9 +454,19 @@ export default function InterviewSetup() {
       {/* 已上传文件列表 */}
       {supportingMaterials.length > 0 && (
         <Paper elevation={2} sx={{ p: 2 }}>
-          <Typography variant="subtitle2" gutterBottom>
-            已上传的辅助材料：
-          </Typography>
+          <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
+            <Typography variant="subtitle2">
+              已上传的辅助材料：
+            </Typography>
+            <Button
+              size="small"
+              color="error"
+              startIcon={<DeleteIcon />}
+              onClick={handleClearAllSupporting}
+            >
+              全部删除
+            </Button>
+          </Box>
           <List dense>
             {supportingMaterials.map((file, index) => (
               <ListItem
