@@ -258,3 +258,115 @@ async def chat(request: ChatRequest):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"对话失败: {str(e)}")
+
+
+@router.post("/resume/parse")
+async def parse_resume(file: UploadFile = File(...)):
+    """解析简历文件并提取信息"""
+    try:
+        # Save uploaded file
+        file_id, file_path, file_type, original_name = await document_parser.save_upload(file)
+        
+        # Parse document content
+        content = await document_parser.parse_document(file_path, file_type)
+        
+        # Use LLM to extract structured information from resume
+        from app.services.llm_service import glm4_service
+        
+        prompt = f"""请从以下简历内容中提取关键信息，并以JSON格式返回：
+
+简历内容：
+{content[:8000]}  # Limit content length
+
+请提取以下信息并返回JSON格式：
+{{
+    "name": "姓名",
+    "phone": "手机号（如果没有则返回空字符串）",
+    "email": "邮箱（如果没有则返回空字符串）",
+    "education": [
+        {{
+            "school": "学校名称",
+            "major": "专业",
+            "degree": "学历（本科/硕士/博士）",
+            "graduation_year": "毕业年份"
+        }}
+    ],
+    "work_experience": [
+        {{
+            "company": "公司名称",
+            "position": "职位",
+            "duration": "工作时间段"
+        }}
+    ],
+    "skills": {{
+        "programming_languages": ["编程语言列表"],
+        "databases": ["数据库列表"],
+        "frameworks": ["框架列表"],
+        "middleware": ["中间件列表"]
+    }},
+    "estimated_level": "预估职级（初级/中级/高级）",
+    "years_of_experience": 工作年限（数字）,
+    "interview_strategy": {{
+        "focus_areas": ["面试重点考察领域，3-5个"],
+        "difficulty_adjustment": "难度调整（简单/正常/困难）",
+        "scenario_design": "场景设计主题"
+    }}
+}}
+
+请确保返回有效的JSON格式。"""
+
+        messages = [
+            {"role": "system", "content": "你是一位专业的简历解析助手。请从简历中提取关键信息并以JSON格式返回。"},
+            {"role": "user", "content": prompt}
+        ]
+        
+        response = await glm4_service.chat_completion(messages, temperature=0.3)
+        
+        # Parse JSON response
+        import json
+        try:
+            # Try to extract JSON from response
+            json_start = response.find('{')
+            json_end = response.rfind('}') + 1
+            if json_start >= 0 and json_end > json_start:
+                json_str = response[json_start:json_end]
+                parsed_data = json.loads(json_str)
+            else:
+                parsed_data = json.loads(response)
+        except json.JSONDecodeError:
+            # If JSON parsing fails, return basic structure
+            parsed_data = {
+                "name": original_name.split('.')[0] if original_name else "候选人",
+                "phone": "",
+                "email": "",
+                "education": [{"school": "", "major": "", "degree": "", "graduation_year": ""}],
+                "work_experience": [{"company": "", "position": "", "duration": ""}],
+                "skills": {
+                    "programming_languages": [],
+                    "databases": [],
+                    "frameworks": [],
+                    "middleware": []
+                },
+                "estimated_level": "中级",
+                "years_of_experience": 0,
+                "interview_strategy": {
+                    "focus_areas": ["Go语言", "MySQL", "Redis"],
+                    "difficulty_adjustment": "正常",
+                    "scenario_design": "微服务架构设计"
+                }
+            }
+        
+        # Clean up uploaded file
+        import os
+        try:
+            os.remove(file_path)
+        except:
+            pass
+        
+        return parsed_data
+        
+    except Exception as e:
+        import traceback
+        print(f"[ERROR] 简历解析失败: {str(e)}")
+        print(f"[ERROR] Traceback: {traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=f"简历解析失败: {str(e)}")
