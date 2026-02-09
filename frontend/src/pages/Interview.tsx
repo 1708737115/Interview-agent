@@ -691,23 +691,25 @@ export default function Interview() {
             </Typography>
             <Divider sx={{ mb: 2 }} />
             <Typography variant="body1" gutterBottom>
-              <strong>{resumeData?.name || '张三'}</strong>
+              <strong>{resumeData?.name || '候选人'}</strong>
             </Typography>
             <Typography variant="body2" color="text.secondary" gutterBottom>
-              {resumeData?.estimated_level || '中级'} · {resumeData?.years_of_experience || 3.5}年经验
+              {resumeData?.estimated_level || ''} {resumeData?.years_of_experience ? `· ${resumeData.years_of_experience}年经验` : ''}
             </Typography>
-            <Box mt={2}>
-              <Typography variant="caption" color="text.secondary">
-                重点考察领域：
-              </Typography>
-              <Box display="flex" flexWrap="wrap" gap={0.5} mt={0.5}>
-                {(resumeData?.interview_strategy?.focus_areas || ['Go', 'MySQL', 'Redis']).map(
-                  (area: string, index: number) => (
-                    <Chip key={index} label={area} size="small" variant="outlined" />
-                  )
-                )}
+            {resumeData?.interview_strategy?.focus_areas && (
+              <Box mt={2}>
+                <Typography variant="caption" color="text.secondary">
+                  重点考察领域：
+                </Typography>
+                <Box display="flex" flexWrap="wrap" gap={0.5} mt={0.5}>
+                  {resumeData.interview_strategy.focus_areas.map(
+                    (area: string, index: number) => (
+                      <Chip key={index} label={area} size="small" variant="outlined" />
+                    )
+                  )}
+                </Box>
               </Box>
-            </Box>
+            )}
           </CardContent>
         </Card>
 
