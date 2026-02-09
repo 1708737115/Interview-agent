@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads and Data
+uploads/*
+!uploads/.gitkeep
+chroma_db/
+backend/data/repos/*
+!backend/data/repos/.gitkeep
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Docker
+.dockerignore
+
+# PDF extraction temp files (keep only final config)
+extracted_questions.json
+raw_text.txt
+
+# Build outputs
+frontend/dist/
+frontend/build/

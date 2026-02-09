@@ -248,6 +248,13 @@ interface Message {
     hasRealCase?: boolean
     questionText?: string
     questionCategory?: string
+    questionId?: string
+    userAnswer?: string
+    standardAnswer?: string | null
+    keyPoints?: string[]
+    coverage?: number
+    coveredPoints?: string[]
+    missedPoints?: string[]
   }
   isFollowup?: boolean
 }
@@ -376,6 +383,59 @@ export default function Interview() {
       assessment = 'average'
     }
     
+    // 添加标准答案（根据题目ID匹配，这里简化处理）
+    const standardAnswers: Record<string, { answer: string; keyPoints: string[] }> = {
+      'go-1': {
+        answer: 'goroutine和线程的主要区别：1) 内存占用：goroutine初始栈仅2KB，线程通常2MB；2) 调度方式：goroutine由Golang运行时调度（GMP模型），线程由OS内核调度；3) 切换成本：goroutine切换在用户态完成，线程切换需要内核态；4) 标识：goroutine没有唯一标识，线程有线程ID',
+        keyPoints: ['内存占用', '调度方式', 'GMP模型', '用户态', '切换成本']
+      },
+      'go-2': {
+        answer: 'channel底层实现：1) 数据结构：包含buf环形缓冲区、sendq/recvq等待队列、lock互斥锁；2) 通信方式：通过内存拷贝传递数据；3) 阻塞机制：无缓冲channel同步阻塞，有缓冲channel异步非阻塞；4) select实现：多路复用通过轮询+随机选择实现',
+        keyPoints: ['环形缓冲区', '内存拷贝', '等待队列', 'mutex锁', '同步/异步']
+      },
+      'go-3': {
+        answer: 'Go GC机制：1) 三色标记法：白色（未访问）、灰色（访问中）、黑色（已访问）；2) 并发标记：与用户程序并发执行，减少STW时间；3) 写屏障：记录对象引用变化，保证标记准确性；4) 触发时机：定时触发、主动触发、内存阈值触发',
+        keyPoints: ['三色标记', '并发标记', '写屏障', 'STW', 'GOGC']
+      },
+      'mysql-1': {
+        answer: 'MySQL索引用B+树的原因：1) B+树所有数据在叶子节点，非叶子节点只存索引，存储效率高；2) B+树叶子节点通过指针连接，适合范围查询；3) B+树查询效率稳定，都是树高次IO；4) 相比B树：B+树非叶子节点不存数据，可以存更多索引',
+        keyPoints: ['B+树', '叶子节点', '范围查询', 'IO次数', '存储效率']
+      },
+      'mysql-2': {
+        answer: 'MySQL事务隔离级别：1) 读未提交：可能读到未提交数据，存在脏读；2) 读已提交：解决脏读，但存在不可重复读；3) 可重复读：解决不可重复读，但存在幻读（MySQL默认）；4) 串行化：解决所有问题，但性能最差。实现原理：MVCC多版本并发控制',
+        keyPoints: ['脏读', '不可重复读', '幻读', 'MVCC', 'read view']
+      },
+      'redis-1': {
+        answer: 'Redis快的原因：1) 内存操作：所有数据在内存，读写速度极快；2) 单线程：避免线程切换开销和锁竞争；3) IO多路复用：基于epoll实现高并发网络处理；4) 高效数据结构：SDS、跳表、压缩列表等优化；5) 协议简单：RESP协议解析效率高',
+        keyPoints: ['内存操作', '单线程', 'IO多路复用', 'epoll', '高效数据结构']
+      },
+      'redis-4': {
+        answer: '缓存三大问题：1) 缓存穿透：查询不存在数据，绕过缓存直达DB。解决：布隆过滤器、缓存空值；2) 缓存击穿：热点key过期，瞬间大量请求打到DB。解决：互斥锁、逻辑过期；3) 缓存雪崩：大量key同时过期或Redis宕机。解决：随机过期时间、多级缓存',
+        keyPoints: ['缓存穿透', '缓存击穿', '缓存雪崩', '布隆过滤器', '互斥锁']
+      }
+    }
+    
+    // 获取当前题目的标准答案
+    const currentQuestionId = typeof currentQuestion?.question === 'object' ? currentQuestion?.question?.id : ''
+    const standardAnswer = currentQuestionId ? standardAnswers[currentQuestionId] : null
+    
+    // 计算答案覆盖率（如果存在标准答案）
+    let coverage = 0
+    let coveredPoints: string[] = []
+    let missedPoints: string[] = []
+    
+    if (standardAnswer) {
+      coveredPoints = standardAnswer.keyPoints.filter(point => 
+        answerContent.includes(point) || 
+        answerContent.includes(point.replace('道', ''))
+      )
+      missedPoints = standardAnswer.keyPoints.filter(point => 
+        !answerContent.includes(point) && 
+        !answerContent.includes(point.replace('道', ''))
+      )
+      coverage = Math.round((coveredPoints.length / standardAnswer.keyPoints.length) * 100)
+    }
+    
     const evaluation = { 
       score, 
       feedback,
@@ -386,7 +446,14 @@ export default function Interview() {
       hasCodeExample,
       hasRealCase,
       questionText,
-      questionCategory
+      questionCategory,
+      questionId: currentQuestionId,
+      userAnswer: inputMessage.trim(),
+      standardAnswer: standardAnswer?.answer || null,
+      keyPoints: standardAnswer?.keyPoints || [],
+      coverage,
+      coveredPoints,
+      missedPoints
     }
 
     // 更新总分
